@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Stive | AI & CV | CG & AR/VR Developer</title>
+    <meta name="description" content="Daniel Stive — AI & Computer Vision, Computer Graphics & 3D GIS, AR/VR & XR, and Game Development specialist with 8+ years of software development experience." />
+    <meta name="author" content="Daniel Stive" />
+    <meta name="keywords" content="Daniel Stive, AI developer, computer vision, 3D GIS, computer graphics, AR, VR, XR, game development, Unity, Three.js, PyTorch, OpenCV" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="icon" type="image/svg+xml" href="/placeholder.svg" />
+
+    <meta property="og:title" content="Daniel Stive | AI & CV | CG & AR/VR Developer" />
+    <meta property="og:description" content="Intelligent computer vision systems, advanced 3D visualization, immersive AR/VR applications and interactive digital worlds." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og.jpg" />
+    <script>
+      // Apply the saved theme or system preference before paint.
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      try {
+        const savedTheme = localStorage.getItem('ds-theme');
+        const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : systemTheme;
+        document.documentElement.classList.add(theme);
+        document.documentElement.style.colorScheme = theme;
+      } catch {
+        document.documentElement.classList.add(systemTheme);
+        document.documentElement.style.colorScheme = systemTheme;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
