@@ -1,7 +1,18 @@
 import React from 'react';
 import { Brain, Box, Glasses, Gamepad2, Code2, Linkedin, Github } from 'lucide-react';
 import type { DomainKey } from '@/data/site';
-import { domainByTag } from '@/data/site';
+import { domainByTag, PROFILE } from '@/data/site';
+
+/** Logo letters: the saved monogram, or the name's initials when it's empty. */
+const monogramText = () =>
+  PROFILE.monogram ||
+  PROFILE.name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0])
+    .join('')
+    .slice(0, 3)
+    .toUpperCase();
 import { useInView } from '@/hooks/useInView';
 
 export const DOMAIN_ICONS: Record<DomainKey | 'web', React.ComponentType<{ className?: string }>> = {
@@ -82,7 +93,7 @@ export function Monogram({ className = '' }: { className?: string }) {
       style={{ fontFamily: 'Space Grotesk, sans-serif' }}
       aria-hidden
     >
-      DS
+      {monogramText()}
     </span>
   );
 }

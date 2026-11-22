@@ -1,0 +1,1188 @@
+{
+  "profile": {
+    "name": "Jonas Kasilag",
+    "firstName": "Jonas",
+    "monogram": "DS",
+    "role": "AI & CV | CG & AR/VR Developer",
+    "yearsExperience": 8,
+    "heroDescription": "I build intelligent computer vision systems, advanced 3D visualization experiences, immersive AR/VR applications, and interactive digital worlds.",
+    "shortBio": "Software developer specializing in AI, Computer Vision, Computer Graphics, 3D GIS, AR/VR and Game Development — building intelligent visual systems and immersive digital experiences.",
+    "hireNote": "Available for new projects"
+  },
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/daniel-stive-patino-sepulveda-a8b351448/",
+    "telegram": "https://t.me/MightyEagle1052",
+    "whatsapp": "https://wa.me/639759738697",
+    "email": "danielstivepartinosepulveda1@gmail.com",
+    "github": "",
+    "booking": "https://famous.ai/api/crm/6aec6bc022499b887aa4de5b/calendar/public?calendarId=c5250339-c24b-413f-8c0d-941195615852&view=booking"
+  },
+  "crmSubscribeUrl": "https://famous.ai/api/crm/6aec6bc022499b887aa4de5b/subscribe",
+  "images": {
+    "hero": "",
+    "about": "https://d64gsuwffb70l.cloudfront.net/6aec6bc022499b887aa4de5b_1793879159151_99172907.jpg"
+  },
+  "domains": [
+    {
+      "key": "ai",
+      "title": "AI & Computer Vision",
+      "short": "Artificial Intelligence & Computer Vision",
+      "description": "Intelligent visual systems that detect, segment, track and analyze — turning images and video into actionable insight.",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "PyTorch",
+        "YOLO",
+        "Object Detection",
+        "Image Segmentation",
+        "Motion Tracking",
+        "Deep Learning",
+        "AI Analytics"
+      ]
+    },
+    {
+      "key": "cg",
+      "title": "Computer Graphics & 3D GIS",
+      "short": "Computer Graphics, 3D Modeling & 3D GIS",
+      "description": "Real-time 3D rendering, modeling and geospatial visualization — from interactive web scenes to digital twins of entire cities.",
+      "technologies": [
+        "Three.js",
+        "WebGL",
+        "React Three Fiber",
+        "Blender",
+        "SketchUp",
+        "Autodesk 3ds Max",
+        "CesiumJS",
+        "GeoPandas",
+        "GDAL",
+        "Rasterio"
+      ]
+    },
+    {
+      "key": "xr",
+      "title": "AR/VR & XR Development",
+      "short": "Augmented, Virtual & Extended Reality",
+      "description": "Immersive experiences that blend digital content with the physical world across headsets, mobile devices and the browser.",
+      "technologies": [
+        "A-Frame",
+        "OpenXR",
+        "AR Foundation",
+        "WebXR",
+        "Virtual Reality",
+        "Augmented Reality",
+        "Interactive 3D Experiences"
+      ]
+    },
+    {
+      "key": "game",
+      "title": "Game Development",
+      "short": "Game Development",
+      "description": "Interactive games and real-time worlds with solid mechanics, networked multiplayer and polished visuals.",
+      "technologies": [
+        "Unity",
+        "C#",
+        "Unreal Engine",
+        "C++",
+        "Game Mechanics",
+        "Multiplayer Systems",
+        "3D Environments",
+        "Shaders"
+      ]
+    }
+  ],
+  "skillCategories": [
+    {
+      "title": "AI & Machine Learning",
+      "domain": "ai",
+      "skills": [
+        {
+          "name": "Python",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        },
+        {
+          "name": "PyTorch",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+        },
+        {
+          "name": "Deep Learning"
+        },
+        {
+          "name": "AI Analytics"
+        }
+      ]
+    },
+    {
+      "title": "Computer Vision",
+      "domain": "ai",
+      "skills": [
+        {
+          "name": "OpenCV",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+        },
+        {
+          "name": "YOLO"
+        },
+        {
+          "name": "Object Detection"
+        },
+        {
+          "name": "Image Segmentation"
+        },
+        {
+          "name": "Motion Tracking"
+        }
+      ]
+    },
+    {
+      "title": "Computer Graphics",
+      "domain": "cg",
+      "skills": [
+        {
+          "name": "Three.js",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
+        },
+        {
+          "name": "WebGL",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webgl/webgl-original.svg"
+        },
+        {
+          "name": "React Three Fiber",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+          "name": "Shaders"
+        }
+      ]
+    },
+    {
+      "title": "3D Modeling & Visualization",
+      "domain": "cg",
+      "skills": [
+        {
+          "name": "Blender",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg"
+        },
+        {
+          "name": "SketchUp"
+        },
+        {
+          "name": "Autodesk 3ds Max"
+        }
+      ]
+    },
+    {
+      "title": "GIS & Geospatial Technologies",
+      "domain": "cg",
+      "skills": [
+        {
+          "name": "CesiumJS"
+        },
+        {
+          "name": "GeoPandas"
+        },
+        {
+          "name": "GDAL"
+        },
+        {
+          "name": "Rasterio"
+        }
+      ]
+    },
+    {
+      "title": "AR/VR & XR",
+      "domain": "xr",
+      "skills": [
+        {
+          "name": "A-Frame"
+        },
+        {
+          "name": "OpenXR"
+        },
+        {
+          "name": "AR Foundation"
+        },
+        {
+          "name": "WebXR"
+        }
+      ]
+    },
+    {
+      "title": "Game Development",
+      "domain": "game",
+      "skills": [
+        {
+          "name": "Unity",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+        },
+        {
+          "name": "C#",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+        },
+        {
+          "name": "Unreal Engine",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg"
+        },
+        {
+          "name": "C++",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+        }
+      ]
+    },
+    {
+      "title": "Web Development",
+      "domain": "web",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        },
+        {
+          "name": "React",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+          "name": "Three.js",
+          "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
+        },
+        {
+          "name": "WebXR"
+        }
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "domain": "ai",
+      "title": "Intelligent Visual Systems",
+      "text": "Designing computer vision pipelines for detection, segmentation and motion tracking, and turning their output into analytics."
+    },
+    {
+      "domain": "cg",
+      "title": "3D Visualization & Geospatial Platforms",
+      "text": "Building real-time 3D scenes, product visualizers and 3D GIS platforms that make complex spatial data explorable."
+    },
+    {
+      "domain": "xr",
+      "title": "Immersive AR/VR Experiences",
+      "text": "Creating augmented and virtual reality applications that bring interactive 3D content into real and virtual spaces."
+    },
+    {
+      "domain": "game",
+      "title": "Interactive Games & Real-Time Worlds",
+      "text": "Developing game mechanics, multiplayer systems and 3D environments with Unity and Unreal Engine."
+    }
+  ],
+  "experience": [],
+  "testimonials": [],
+  "projects": [
+    {
+      "id": "goaltrack",
+      "title": "GoalTrack",
+      "description": "An AI-powered football analytics platform that detects and tracks players and the ball from match footage. It analyzes player speed, distance, possession, shots, passes, and movement patterns, with team heatmaps, formation analysis, tactical pass networks, synchronized video replay, and performance dashboards.",
+      "overview": "An AI-powered football analytics platform that detects and tracks players and the ball from match footage. It analyzes player speed, distance, possession, shots, passes, and movement patterns, with team heatmaps, formation analysis, tactical pass networks, synchronized video replay, and performance dashboards.",
+      "image": "/project_images/1-GoalTrack/1.png",
+      "screenshots": [
+        "/project_images/1-GoalTrack/2.png",
+        "/project_images/1-GoalTrack/3.png",
+        "/project_images/1-GoalTrack/4.png",
+        "/project_images/1-GoalTrack/5.png",
+        "/project_images/1-GoalTrack/6.png",
+        "/project_images/1-GoalTrack/7.png",
+        "/project_images/1-GoalTrack/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ],
+      "featuredRank": 1
+    },
+    {
+      "id": "courttrack",
+      "title": "CourtTrack",
+      "description": "An intelligent basketball analytics system that tracks players and the ball while analyzing shooting mechanics, shot trajectories, player positioning, and movement. It provides shot charts, movement heatmaps, pick-and-roll analysis, pass networks, play-by-play events, and tactical performance reports.",
+      "overview": "An intelligent basketball analytics system that tracks players and the ball while analyzing shooting mechanics, shot trajectories, player positioning, and movement. It provides shot charts, movement heatmaps, pick-and-roll analysis, pass networks, play-by-play events, and tactical performance reports.",
+      "image": "/project_images/2-CourtTrack/1.png",
+      "screenshots": [
+        "/project_images/2-CourtTrack/2.png",
+        "/project_images/2-CourtTrack/3.png",
+        "/project_images/2-CourtTrack/4.png",
+        "/project_images/2-CourtTrack/5.png",
+        "/project_images/2-CourtTrack/6.png",
+        "/project_images/2-CourtTrack/7.png",
+        "/project_images/2-CourtTrack/8.png",
+        "/project_images/2-CourtTrack/9.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "volleytrack",
+      "title": "VolleyTrack",
+      "description": "VolleyTrack project.",
+      "overview": "An AI-driven volleyball analysis platform for tracking players, ball trajectories, serves, spikes, and rallies. It evaluates jump height, attack speed, player rotations, landing zones, and movement patterns through pose estimation, tactical heatmaps, and match performance dashboards.",
+      "image": "/project_images/3-VolleyTrack/1.png",
+      "screenshots": [
+        "/project_images/3-VolleyTrack/2.png",
+        "/project_images/3-VolleyTrack/3.png",
+        "/project_images/3-VolleyTrack/4.png",
+        "/project_images/3-VolleyTrack/5.png",
+        "/project_images/3-VolleyTrack/6.png",
+        "/project_images/3-VolleyTrack/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "diamondscope",
+      "title": "DiamondScope",
+      "description": "DiamondScope project.",
+      "overview": "A computer vision platform for analyzing baseball games through player and ball tracking. It examines pitching speed, ball trajectories, batting mechanics, defensive positioning, and fielding performance using pose estimation, spray charts, tactical visualizations, and match reports.",
+      "image": "/project_images/4-DiamondScope/1.png",
+      "screenshots": [
+        "/project_images/4-DiamondScope/2.png",
+        "/project_images/4-DiamondScope/3.png",
+        "/project_images/4-DiamondScope/4.png",
+        "/project_images/4-DiamondScope/5.png",
+        "/project_images/4-DiamondScope/6.png",
+        "/project_images/4-DiamondScope/7.png",
+        "/project_images/4-DiamondScope/8.png",
+        "/project_images/4-DiamondScope/9.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "tt-vision-analyzer",
+      "title": "TTVision",
+      "description": "TTVision project.",
+      "overview": "An AI-powered table tennis analysis system that detects and tracks players and balls, maps shot trajectories, and classifies playing techniques. It provides stroke analysis, serve evaluation, ball speed and spin estimation, movement heatmaps, shot placement, rally tracking, and performance statistics.",
+      "image": "/project_images/5-TTVision/1.png",
+      "screenshots": [
+        "/project_images/5-TTVision/2.png",
+        "/project_images/5-TTVision/3.png",
+        "/project_images/5-TTVision/4.png",
+        "/project_images/5-TTVision/5.png",
+        "/project_images/5-TTVision/6.png",
+        "/project_images/5-TTVision/7.png",
+        "/project_images/5-TTVision/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "badminton-analysis-system",
+      "title": "ShuttleTrack",
+      "description": "ShuttleTrack project.",
+      "overview": "A badminton analytics platform that tracks players and shuttlecocks throughout matches. It analyzes shot trajectories, stroke classification, player movement, footwork, rally patterns, and shot placement through interactive court heatmaps and performance comparisons.",
+      "image": "/project_images/6-ShuttleTrack/1.png",
+      "screenshots": [
+        "/project_images/6-ShuttleTrack/2.png",
+        "/project_images/6-ShuttleTrack/3.png",
+        "/project_images/6-ShuttleTrack/4.png",
+        "/project_images/6-ShuttleTrack/5.png",
+        "/project_images/6-ShuttleTrack/6.png",
+        "/project_images/6-ShuttleTrack/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "acetrack",
+      "title": "AceTrack",
+      "description": "AceTrack project.",
+      "overview": "An intelligent tennis analytics platform that tracks players and tennis balls while evaluating shot speed, spin, trajectories, and landing positions. Features include serve analysis, pose-based stroke evaluation, court heatmaps, rally breakdowns, player comparisons, and tactical performance dashboards.",
+      "image": "/project_images/7-AceTrack/1.png",
+      "screenshots": [
+        "/project_images/7-AceTrack/2.png",
+        "/project_images/7-AceTrack/3.png",
+        "/project_images/7-AceTrack/4.png",
+        "/project_images/7-AceTrack/5.png",
+        "/project_images/7-AceTrack/6.png",
+        "/project_images/7-AceTrack/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "golfvision",
+      "title": "GolfVision",
+      "description": "GolfVision project.",
+      "overview": "An AI-powered golf training and swing analysis platform combining computer vision, synchronized multi-camera footage, and LiDAR-based 3D sensing. It evaluates body posture, club paths, face angles, hip rotation, and swing tempo through 3D motion visualization, swing comparisons, and coaching analytics.",
+      "image": "/project_images/8-GolfVision/1.png",
+      "screenshots": [
+        "/project_images/8-GolfVision/2.png",
+        "/project_images/8-GolfVision/3.png",
+        "/project_images/8-GolfVision/4.png",
+        "/project_images/8-GolfVision/5.png",
+        "/project_images/8-GolfVision/6.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "cricketvision",
+      "title": "CricketVision",
+      "description": "CricketVision project.",
+      "overview": "A computer vision platform that analyzes cricket matches by detecting players, balls, wickets, and umpires. It tracks ball speed, swing, bounce locations, and trajectories while providing pitch mapping, batting-shot classification, match statistics, video playback, and performance reports.",
+      "image": "/project_images/9-CricketVision/1.png",
+      "screenshots": [
+        "/project_images/9-CricketVision/2.png",
+        "/project_images/9-CricketVision/3.png",
+        "/project_images/9-CricketVision/4.png",
+        "/project_images/9-CricketVision/5.png",
+        "/project_images/9-CricketVision/6.png",
+        "/project_images/9-CricketVision/7.png",
+        "/project_images/9-CricketVision/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "cuemetric",
+      "title": "CueMetric",
+      "description": "CueMetric project.",
+      "overview": "An AI-powered snooker analysis system that tracks balls and evaluates shot trajectories, cue speed, collision paths, and player positioning. It includes cue alignment analysis, shot prediction, positional strategy planning, shot-by-shot performance tracking, match statistics, and synchronized video review.",
+      "image": "/project_images/10-CueMetric/1.png",
+      "screenshots": [
+        "/project_images/10-CueMetric/2.png",
+        "/project_images/10-CueMetric/3.png",
+        "/project_images/10-CueMetric/4.png",
+        "/project_images/10-CueMetric/5.png",
+        "/project_images/10-CueMetric/6.png",
+        "/project_images/10-CueMetric/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "boxvision",
+      "title": "BoxVision",
+      "description": "BoxVision project.",
+      "overview": "A computer vision platform for analyzing boxing matches and training sessions through person tracking and pose estimation. It evaluates punch activity, hand movements, defensive actions, and boxer positioning, presenting fight statistics, synchronized footage, performance trends, and technique analysis.",
+      "image": "/project_images/11-BoxVision/1.png",
+      "screenshots": [
+        "/project_images/11-BoxVision/2.png",
+        "/project_images/11-BoxVision/3.png",
+        "/project_images/11-BoxVision/4.png",
+        "/project_images/11-BoxVision/5.png",
+        "/project_images/11-BoxVision/6.png",
+        "/project_images/11-BoxVision/7.png",
+        "/project_images/11-BoxVision/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "radiology-medical-imaging",
+      "title": "Radiology AI Imaging",
+      "description": "Radiology AI Imaging project.",
+      "overview": "An AI-assisted medical imaging workspace for reviewing X-ray, CT, MRI, and ultrasound studies. It provides image enhancement, anomaly highlighting, segmentation overlays, anatomical measurements, scan comparisons, DICOM-oriented navigation, 3D reconstruction, and structured radiology reporting.",
+      "image": "/project_images/12-Radiology AI Imaging/1.png",
+      "screenshots": [
+        "/project_images/12-Radiology AI Imaging/2.png",
+        "/project_images/12-Radiology AI Imaging/3.png",
+        "/project_images/12-Radiology AI Imaging/4.png",
+        "/project_images/12-Radiology AI Imaging/5.png",
+        "/project_images/12-Radiology AI Imaging/6.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ],
+      "featuredRank": 2
+    },
+    {
+      "id": "ophthalmology",
+      "title": "Ophthalmology",
+      "description": "Ophthalmology project.",
+      "overview": "An AI-powered ophthalmology platform for analyzing retinal images, fundus photographs, OCT scans, and eye structures. It supports retinal abnormality screening, blood vessel segmentation, optic disc measurements, diabetic retinopathy-oriented analysis, 3D corneal visualization, and comparative imaging reports.",
+      "image": "/project_images/13-Ophthalmology/1.png",
+      "screenshots": [
+        "/project_images/13-Ophthalmology/2.png",
+        "/project_images/13-Ophthalmology/3.png",
+        "/project_images/13-Ophthalmology/4.png",
+        "/project_images/13-Ophthalmology/5.png",
+        "/project_images/13-Ophthalmology/6.png",
+        "/project_images/13-Ophthalmology/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "skincare",
+      "title": "SkinCare",
+      "description": "SkinCare project.",
+      "overview": "An AI-based dermatology imaging platform for analyzing clinical and dermoscopic skin photographs. It detects and segments skin lesions, visualizes classification results, evaluates lesion boundaries, and provides image enhancement, 3D lesion visualization, longitudinal comparisons, and structured reporting.",
+      "image": "/project_images/14-SkinCare/1.png",
+      "screenshots": [
+        "/project_images/14-SkinCare/2.png",
+        "/project_images/14-SkinCare/3.png",
+        "/project_images/14-SkinCare/4.png",
+        "/project_images/14-SkinCare/5.png",
+        "/project_images/14-SkinCare/6.png",
+        "/project_images/14-SkinCare/7.png",
+        "/project_images/14-SkinCare/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "orthopedics-musculoskeletal-imaging",
+      "title": "AI Orthopedic Imaging",
+      "description": "AI Orthopedic Imaging project.",
+      "overview": "An AI-assisted orthopedic imaging system for reviewing X-ray, CT, and MRI scans. It identifies potential fractures and bone abnormalities, supports image segmentation and skeletal measurements, and provides annotated scan visualization, 3D bone reconstruction, study comparisons, and orthopedic reporting.",
+      "image": "/project_images/15-AI Orthopedic Imaging/1.png",
+      "screenshots": [
+        "/project_images/15-AI Orthopedic Imaging/2.png",
+        "/project_images/15-AI Orthopedic Imaging/3.png",
+        "/project_images/15-AI Orthopedic Imaging/4.png",
+        "/project_images/15-AI Orthopedic Imaging/5.png",
+        "/project_images/15-AI Orthopedic Imaging/6.png",
+        "/project_images/15-AI Orthopedic Imaging/7.png",
+        "/project_images/15-AI Orthopedic Imaging/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "digital-pathology",
+      "title": "Digital Pathology AI",
+      "description": "Digital Pathology AI project.",
+      "overview": "A computer vision platform for analyzing digital pathology slides and microscopic tissue samples. It supports cell detection, tumor-region identification, tissue classification, segmentation masks, cell counting, microscopy visualization, quantitative analysis, and pathology reporting workflows.",
+      "image": "/project_images/16-Digital Pathology AI/1.png",
+      "screenshots": [
+        "/project_images/16-Digital Pathology AI/2.png",
+        "/project_images/16-Digital Pathology AI/3.png",
+        "/project_images/16-Digital Pathology AI/4.png",
+        "/project_images/16-Digital Pathology AI/5.png",
+        "/project_images/16-Digital Pathology AI/6.png",
+        "/project_images/16-Digital Pathology AI/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "heartcare",
+      "title": "HeartCare",
+      "description": "HeartCare project.",
+      "overview": "An intelligent cardiology analytics workspace for reviewing ECG waveforms and cardiac imaging. It provides 12-lead ECG visualization, rhythm and heart-rate measurements, arrhythmia-oriented event detection, echocardiography analysis, cardiac measurements, patient monitoring dashboards, and structured reports.",
+      "image": "/project_images/17-HeartCare/1.png",
+      "screenshots": [
+        "/project_images/17-HeartCare/2.png",
+        "/project_images/17-HeartCare/3.png",
+        "/project_images/17-HeartCare/4.png",
+        "/project_images/17-HeartCare/5.png",
+        "/project_images/17-HeartCare/6.png",
+        "/project_images/17-HeartCare/7.png",
+        "/project_images/17-HeartCare/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "lungcare",
+      "title": "LungCare",
+      "description": "LungCare project.",
+      "overview": "An AI-powered pulmonary imaging platform for analyzing chest X-rays and CT scans. It highlights suspected lung abnormalities and nodules, segments lung structures, provides 3D CT reconstruction, lesion measurements, longitudinal comparisons, AI confidence summaries, and radiology reporting tools.",
+      "image": "/project_images/18-LungCare/1.png",
+      "screenshots": [
+        "/project_images/18-LungCare/2.png",
+        "/project_images/18-LungCare/3.png",
+        "/project_images/18-LungCare/4.png",
+        "/project_images/18-LungCare/5.png",
+        "/project_images/18-LungCare/6.png",
+        "/project_images/18-LungCare/7.png",
+        "/project_images/18-LungCare/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "neurovision",
+      "title": "NeuroVision",
+      "description": "NeuroVision project.",
+      "overview": "An integrated neuroimaging platform combining brain MRI/CT visualization with EEG signal analysis. It supports lesion detection, brain structure segmentation, multi-plane scan viewing, 3D brain visualization, EEG waveform monitoring, spectral analysis, artifact filtering, and neurological research dashboards.",
+      "image": "/project_images/19-NeuroVision/1.png",
+      "screenshots": [
+        "/project_images/19-NeuroVision/2.png",
+        "/project_images/19-NeuroVision/3.png",
+        "/project_images/19-NeuroVision/4.png",
+        "/project_images/19-NeuroVision/5.png",
+        "/project_images/19-NeuroVision/6.png",
+        "/project_images/19-NeuroVision/7.png",
+        "/project_images/19-NeuroVision/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "roadguard",
+      "title": "RoadGuard",
+      "description": "RoadGuard project.",
+      "overview": "An intelligent traffic monitoring platform combining CCTV, computer vision, and LiDAR data. It detects and tracks vehicles, estimates speed and lane occupancy, identifies traffic incidents, analyzes congestion, and visualizes 3D LiDAR point clouds through geospatial maps, sensor-fusion interfaces, and real-time alerts.",
+      "image": "/project_images/20-RoadGuard/1.png",
+      "screenshots": [
+        "/project_images/20-RoadGuard/2.png",
+        "/project_images/20-RoadGuard/3.png",
+        "/project_images/20-RoadGuard/4.png",
+        "/project_images/20-RoadGuard/5.png",
+        "/project_images/20-RoadGuard/6.png",
+        "/project_images/20-RoadGuard/7.png",
+        "/project_images/20-RoadGuard/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ],
+      "featuredRank": 3
+    },
+    {
+      "id": "marketsurveillance",
+      "title": "MarketSurveillance",
+      "description": "MarketSurveillance project.",
+      "overview": "An AI-powered retail surveillance platform for monitoring store environments through multiple CCTV cameras. It tracks people and shopping carts, analyzes checkout queues and customer dwell time, generates store heatmaps, monitors restricted areas, and provides centralized security dashboards and incident reports.",
+      "image": "/project_images/21-MarketSurveillance/1.png",
+      "screenshots": [
+        "/project_images/21-MarketSurveillance/2.png",
+        "/project_images/21-MarketSurveillance/3.png",
+        "/project_images/21-MarketSurveillance/4.png",
+        "/project_images/21-MarketSurveillance/5.png",
+        "/project_images/21-MarketSurveillance/6.png",
+        "/project_images/21-MarketSurveillance/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "aeroguard-ai",
+      "title": "AeroGuard",
+      "description": "AeroGuard project.",
+      "overview": "An intelligent airport security monitoring platform combining terminal CCTV, identity verification, baggage screening, and airfield perimeter surveillance. It supports people and object tracking, unattended baggage detection, suspicious behavior alerts, X-ray threat highlighting, LiDAR visualization, and incident management.",
+      "image": "/project_images/22-AeroGuard/1.png",
+      "screenshots": [
+        "/project_images/22-AeroGuard/2.png",
+        "/project_images/22-AeroGuard/3.png",
+        "/project_images/22-AeroGuard/4.png",
+        "/project_images/22-AeroGuard/5.png",
+        "/project_images/22-AeroGuard/6.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "cash-surveillance",
+      "title": "CashSurveillance",
+      "description": "CashSurveillance project.",
+      "overview": "A computer vision prototype for detecting banknotes in retail CCTV footage using deep-learning object detection. It includes video annotation, dataset review, YOLO model training, validation dashboards, confidence visualization, false-positive evaluation, model export, and annotated video generation.",
+      "image": "/project_images/23-CashSurveillance/1.png",
+      "screenshots": [
+        "/project_images/23-CashSurveillance/2.png",
+        "/project_images/23-CashSurveillance/3.png",
+        "/project_images/23-CashSurveillance/4.png",
+        "/project_images/23-CashSurveillance/5.png",
+        "/project_images/23-CashSurveillance/6.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "drone-sentinel",
+      "title": "DroneSentinel",
+      "description": "DroneSentinel project.",
+      "overview": "A multi-drone aerial surveillance platform combining real-time video processing, object detection, GPS tracking, and geospatial monitoring. It tracks people and vehicles, visualizes flight telemetry, manages geofences and restricted areas, and provides satellite maps, thermal views, intrusion alerts, and mission playback.",
+      "image": "/project_images/24-DroneSentinel/1.png",
+      "screenshots": [
+        "/project_images/24-DroneSentinel/2.png",
+        "/project_images/24-DroneSentinel/3.png",
+        "/project_images/24-DroneSentinel/4.png",
+        "/project_images/24-DroneSentinel/5.png",
+        "/project_images/24-DroneSentinel/6.png",
+        "/project_images/24-DroneSentinel/7.png",
+        "/project_images/24-DroneSentinel/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "faceguard",
+      "title": "FaceGuard",
+      "description": "FaceGuard project.",
+      "overview": "An AI-powered identity verification and media authenticity platform that combines facial recognition, liveness detection, facial landmarks, and suspicious-media analysis. It provides deepfake risk scoring, document review, verification queues, evidence-based case management, audit reports, and configurable security workflows.",
+      "image": "/project_images/25-FaceGuard/1.png",
+      "screenshots": [
+        "/project_images/25-FaceGuard/2.png",
+        "/project_images/25-FaceGuard/3.png",
+        "/project_images/25-FaceGuard/4.png",
+        "/project_images/25-FaceGuard/5.png",
+        "/project_images/25-FaceGuard/6.png",
+        "/project_images/25-FaceGuard/7.png",
+        "/project_images/25-FaceGuard/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "smart-city-monitor",
+      "title": "Smart City Monitor",
+      "description": "Smart City Monitor project.",
+      "overview": "An urban intelligence platform that analyzes multiple city surveillance cameras to detect people and vehicles, estimate crowd density, and identify unusual events. It provides camera mapping, cross-camera movement tracking, occupancy trends, crowd heatmaps, incident dashboards, real-time alerts, and urban monitoring reports.",
+      "image": "/project_images/26-SmartCityMonitor/1.png",
+      "screenshots": [
+        "/project_images/26-SmartCityMonitor/2.png",
+        "/project_images/26-SmartCityMonitor/3.png",
+        "/project_images/26-SmartCityMonitor/4.png",
+        "/project_images/26-SmartCityMonitor/5.png",
+        "/project_images/26-SmartCityMonitor/6.png",
+        "/project_images/26-SmartCityMonitor/7.png",
+        "/project_images/26-SmartCityMonitor/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "careguard-ai",
+      "title": "CareGuard",
+      "description": "CareGuard project.",
+      "overview": "An AI-powered hospital monitoring platform designed to analyze live camera feeds for patient safety. It supports fall detection, patient and staff tracking, occupancy monitoring, restricted-zone surveillance, ward analytics, pharmacy and laboratory alerts, incident review, and safety reporting.",
+      "image": "/project_images/27-CareGuard/1.png",
+      "screenshots": [
+        "/project_images/27-CareGuard/2.png",
+        "/project_images/27-CareGuard/3.png",
+        "/project_images/27-CareGuard/4.png",
+        "/project_images/27-CareGuard/5.png",
+        "/project_images/27-CareGuard/6.png",
+        "/project_images/27-CareGuard/7.png",
+        "/project_images/27-CareGuard/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "sitesafe-ai",
+      "title": "SiteSafe",
+      "description": "SiteSafe project.",
+      "overview": "A construction safety monitoring system that analyzes multiple CCTV feeds to detect workers and monitor workplace hazards. It identifies missing helmets and safety vests, detects falls, highlights unsafe equipment proximity and restricted zones, and provides real-time alerts, compliance analytics, incident review, and safety reports.",
+      "image": "/project_images/28-SiteSafe/1.png",
+      "screenshots": [
+        "/project_images/28-SiteSafe/2.png",
+        "/project_images/28-SiteSafe/3.png",
+        "/project_images/28-SiteSafe/4.png",
+        "/project_images/28-SiteSafe/5.png",
+        "/project_images/28-SiteSafe/6.png",
+        "/project_images/28-SiteSafe/7.png",
+        "/project_images/28-SiteSafe/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "warehouse-safety-ai",
+      "title": "WarehouseSafety",
+      "description": "WarehouseSafety project.",
+      "overview": "An AI-powered warehouse safety monitoring platform that combines computer vision, deep learning, real-time video analytics, and intelligent hazard detection. It supports worker tracking, PPE compliance monitoring, fall detection, restricted-zone surveillance, forklift proximity analysis, and safety incident reporting to help identify workplace hazards and improve warehouse safety operations.",
+      "image": "/project_images/29-WarehouseSafety/1.png",
+      "screenshots": [
+        "/project_images/29-WarehouseSafety/2.png",
+        "/project_images/29-WarehouseSafety/3.png",
+        "/project_images/29-WarehouseSafety/4.png",
+        "/project_images/29-WarehouseSafety/5.png",
+        "/project_images/29-WarehouseSafety/6.png",
+        "/project_images/29-WarehouseSafety/7.png",
+        "/project_images/29-WarehouseSafety/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "agriplant-vision",
+      "title": "AgriPlantVision",
+      "description": "AgriPlantVision project.",
+      "overview": "An AI-powered agricultural vision platform for crop monitoring, plant disease detection, and plant phenotyping. It analyzes plant images and aerial imagery to identify visible disease symptoms, evaluate crop conditions, and visualize agricultural field indicators for monitoring and research.",
+      "image": "/project_images/30-AgriPlantVision/1.png",
+      "screenshots": [
+        "/project_images/30-AgriPlantVision/2.png",
+        "/project_images/30-AgriPlantVision/3.png",
+        "/project_images/30-AgriPlantVision/4.png",
+        "/project_images/30-AgriPlantVision/5.png",
+        "/project_images/30-AgriPlantVision/6.png",
+        "/project_images/30-AgriPlantVision/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ],
+      "featuredRank": 4
+    },
+    {
+      "id": "microlab-vision",
+      "title": "MicroLab",
+      "description": "MicroLab project.",
+      "overview": "A computer vision platform for analyzing microscopic images and biomedical samples. It supports cell detection, classification, segmentation, microscopic image enhancement, and quantitative sample analysis through laboratory visualization and image-review interfaces.",
+      "image": "/project_images/31-MicroLab/1.png",
+      "screenshots": [
+        "/project_images/31-MicroLab/2.png",
+        "/project_images/31-MicroLab/3.png",
+        "/project_images/31-MicroLab/4.png",
+        "/project_images/31-MicroLab/5.png",
+        "/project_images/31-MicroLab/6.png",
+        "/project_images/31-MicroLab/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "wildscope-vision",
+      "title": "WildScope",
+      "description": "WildScope project.",
+      "overview": "An AI-powered wildlife monitoring platform that recognizes and analyzes animal species in natural environments. It uses computer vision to identify wildlife in images and video, highlight detected animals, and support biodiversity observation and wildlife research.",
+      "image": "/project_images/32-WildScope/1.png",
+      "screenshots": [
+        "/project_images/32-WildScope/2.png",
+        "/project_images/32-WildScope/3.png",
+        "/project_images/32-WildScope/4.png",
+        "/project_images/32-WildScope/5.png",
+        "/project_images/32-WildScope/6.png",
+        "/project_images/32-WildScope/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "marinevision-ai",
+      "title": "MarineVision",
+      "description": "MarineVision project.",
+      "overview": "An AI-powered environmental and marine science platform for analyzing underwater imagery. It performs coral reef classification, biodiversity monitoring, plankton detection, and underwater species recognition to support marine ecosystem observation and environmental research.",
+      "image": "/project_images/33-MarineVision/1.png",
+      "screenshots": [
+        "/project_images/33-MarineVision/2.png",
+        "/project_images/33-MarineVision/3.png",
+        "/project_images/33-MarineVision/4.png",
+        "/project_images/33-MarineVision/5.png",
+        "/project_images/33-MarineVision/6.png",
+        "/project_images/33-MarineVision/7.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV"
+      ]
+    },
+    {
+      "id": "geourban-insight",
+      "title": "GeoUrban",
+      "description": "GeoUrban project.",
+      "overview": "An AI-powered geospatial intelligence platform that combines satellite imagery, GIS datasets, raster processing, and 3D city visualization. It supports land-cover analysis, building and parcel extraction, urban zoning, transportation planning, terrain analysis, and scenario modeling to help visualize and evaluate smart-city development strategies.",
+      "image": "/project_images/34-GeoUrban/1.png",
+      "screenshots": [
+        "/project_images/34-GeoUrban/1.png",
+        "/project_images/34-GeoUrban/2.png",
+        "/project_images/34-GeoUrban/3.png",
+        "/project_images/34-GeoUrban/4.png",
+        "/project_images/34-GeoUrban/5.png",
+        "/project_images/34-GeoUrban/6.png",
+        "/project_images/34-GeoUrban/7.png",
+        "/project_images/34-GeoUrban/8.png",
+        "/project_images/34-GeoUrban/9.png",
+        "/project_images/34-GeoUrban/10.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV",
+        "CG&3D"
+      ],
+      "featuredRank": 5
+    },
+    {
+      "id": "forgemotion-studio",
+      "title": "ForgeMotion",
+      "description": "ForgeMotion project.",
+      "overview": "A comprehensive 3D production management and visualization platform for animation, cinematic creation, and visual effects workflows. It brings together character libraries, 3D rigging, concept development, cinematic sequencing, VFX simulations, rendering queues, timeline editing, and collaborative review and approval interfaces.",
+      "image": "/project_images/35-ForgeMotion/1.png",
+      "screenshots": [
+        "/project_images/35-ForgeMotion/1.png",
+        "/project_images/35-ForgeMotion/2.png",
+        "/project_images/35-ForgeMotion/3.png",
+        "/project_images/35-ForgeMotion/4.png",
+        "/project_images/35-ForgeMotion/5.png",
+        "/project_images/35-ForgeMotion/6.png",
+        "/project_images/35-ForgeMotion/7.png",
+        "/project_images/35-ForgeMotion/8.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "CG&3D"
+      ]
+    },
+    {
+      "id": "carrental",
+      "title": "CarRental",
+      "description": "CarRental project.",
+      "overview": "An interactive vehicle rental platform that combines vehicle discovery, 3D product visualization, and immersive showroom experiences. Users can browse vehicles, inspect exterior details, explore AR/VR showroom environments, manage reservations, access virtual driving experiences, and review rental analytics.",
+      "image": "/project_images/36-CarRental/1.png",
+      "screenshots": [
+        "/project_images/36-CarRental/1.png",
+        "/project_images/36-CarRental/2.png",
+        "/project_images/36-CarRental/3.png",
+        "/project_images/36-CarRental/4.png",
+        "/project_images/36-CarRental/5.png",
+        "/project_images/36-CarRental/6.png",
+        "/project_images/36-CarRental/7.png",
+        "/project_images/36-CarRental/8.png",
+        "/project_images/36-CarRental/9.png",
+        "/project_images/36-CarRental/10.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AR/VR&XR",
+        "AI&CV",
+        "CG&3D"
+      ],
+      "featuredRank": 6
+    },
+    {
+      "id": "fitnesshelper",
+      "title": "FitnessHelper",
+      "description": "FitnessHelper project.",
+      "overview": "An AI-powered fitness and virtual training platform that analyzes exercise movements using computer vision and pose estimation. It evaluates posture, joint alignment, and exercise form while providing workout programs, real-time movement analysis, performance tracking, and AR/VR training modes.",
+      "image": "/project_images/37-FitnessHelper/1.png",
+      "screenshots": [
+        "/project_images/37-FitnessHelper/1.png",
+        "/project_images/37-FitnessHelper/2.png",
+        "/project_images/37-FitnessHelper/3.png",
+        "/project_images/37-FitnessHelper/4.png",
+        "/project_images/37-FitnessHelper/5.png",
+        "/project_images/37-FitnessHelper/6.png",
+        "/project_images/37-FitnessHelper/7.png",
+        "/project_images/37-FitnessHelper/8.png",
+        "/project_images/37-FitnessHelper/9.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "AI&CV",
+        "AR/VR&XR"
+      ]
+    },
+    {
+      "id": "seatvista",
+      "title": "SeatVista",
+      "description": "SeatVista project.",
+      "overview": "An interactive event discovery and ticket-booking platform featuring 3D venue exploration and visual seat selection. Users can browse events, inspect arena layouts, preview stage visibility from selected seats, compare seating sections, complete bookings, and access digital tickets.",
+      "image": "/project_images/38-SeatVista/1.png",
+      "screenshots": [
+        "/project_images/38-SeatVista/1.png",
+        "/project_images/38-SeatVista/2.png",
+        "/project_images/38-SeatVista/3.png",
+        "/project_images/38-SeatVista/4.png",
+        "/project_images/38-SeatVista/5.png",
+        "/project_images/38-SeatVista/6.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "CG&3D"
+      ]
+    },
+    {
+      "id": "diy-design-space",
+      "title": "DIY Design Space",
+      "description": "DIY Design Space project.",
+      "overview": "An interactive room and kitchen planning application that guides users through room dimensions, layouts, door styles, cabinets, appliances, and finishing selections. It combines 2D floor planning, real-time 3D visualization, product configuration, pricing calculations, and itemized quotation generation.",
+      "image": "/project_images/39-DIYDesignSpace/1.png",
+      "screenshots": [
+        "/project_images/39-DIYDesignSpace/1.png",
+        "/project_images/39-DIYDesignSpace/2.png",
+        "/project_images/39-DIYDesignSpace/3.png",
+        "/project_images/39-DIYDesignSpace/4.png",
+        "/project_images/39-DIYDesignSpace/5.png",
+        "/project_images/39-DIYDesignSpace/6.png",
+        "/project_images/39-DIYDesignSpace/7.png",
+        "/project_images/39-DIYDesignSpace/8.png",
+        "/project_images/39-DIYDesignSpace/9.png",
+        "/project_images/39-DIYDesignSpace/10.png",
+        "/project_images/39-DIYDesignSpace/11.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "CG&3D"
+      ],
+      "featuredRank": 7
+    },
+    {
+      "id": "fabuwood-cabinet-visualizer",
+      "title": "Fabuwood",
+      "description": "Fabuwood project.",
+      "overview": "An interactive kitchen design and cabinet visualization platform that allows users to explore room configurations and customize cabinet designs. It supports kitchen layouts, cabinet styles, materials, colors, finishes, 3D room visualization, and 360-degree virtual showroom walkthroughs.",
+      "image": "/project_images/40-Fabuwood/1.png",
+      "screenshots": [
+        "/project_images/40-Fabuwood/1.png",
+        "/project_images/40-Fabuwood/2.png",
+        "/project_images/40-Fabuwood/3.png",
+        "/project_images/40-Fabuwood/4.png",
+        "/project_images/40-Fabuwood/5.png",
+        "/project_images/40-Fabuwood/6.png",
+        "/project_images/40-Fabuwood/7.png",
+        "/project_images/40-Fabuwood/8.png",
+        "/project_images/40-Fabuwood/9.png",
+        "/project_images/40-Fabuwood/10.png",
+        "/project_images/40-Fabuwood/11.png",
+        "/project_images/40-Fabuwood/12.png",
+        "/project_images/40-Fabuwood/13.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "CG&3D"
+      ],
+      "featuredRank": 8
+    },
+    {
+      "id": "strikepoint",
+      "title": "StrikePoint",
+      "description": "StrikePoint project.",
+      "overview": "A tactical first-person shooter game experience featuring local gameplay, online competition, customizable combat units, and multiplayer team battles. It includes weapon loadouts, character equipment, combat HUDs, tactical maps, match progression, team statistics, and victory or defeat screens.",
+      "image": "/project_images/41-StrikePoint/1.png",
+      "screenshots": [
+        "/project_images/41-StrikePoint/1.png",
+        "/project_images/41-StrikePoint/2.png",
+        "/project_images/41-StrikePoint/3.png",
+        "/project_images/41-StrikePoint/4.png",
+        "/project_images/41-StrikePoint/5.png",
+        "/project_images/41-StrikePoint/6.png",
+        "/project_images/41-StrikePoint/7.png",
+        "/project_images/41-StrikePoint/8.png",
+        "/project_images/41-StrikePoint/9.png",
+        "/project_images/41-StrikePoint/10.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "GameDev",
+        "AR/VR&XR"
+      ],
+      "featuredRank": 9
+    },
+    {
+      "id": "skystrike",
+      "title": "SkyStrike",
+      "description": "SkyStrike project.",
+      "overview": "An immersive modern air combat simulation featuring aircraft selection, flight modes, equipment customization, and aerial combat missions. It includes pre-flight preparation, aircraft controls, single-player combat, multiplayer team battles, targeting interfaces, flight statistics, and mission results.",
+      "image": "/project_images/42-SkyStrike/1.png",
+      "screenshots": [
+        "/project_images/42-SkyStrike/1.png",
+        "/project_images/42-SkyStrike/2.png",
+        "/project_images/42-SkyStrike/3.png",
+        "/project_images/42-SkyStrike/4.png",
+        "/project_images/42-SkyStrike/5.png",
+        "/project_images/42-SkyStrike/6.png",
+        "/project_images/42-SkyStrike/7.png",
+        "/project_images/42-SkyStrike/8.png",
+        "/project_images/42-SkyStrike/9.png",
+        "/project_images/42-SkyStrike/10.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "GameDev",
+        "AR/VR&XR"
+      ]
+    },
+    {
+      "id": "fleetstrike",
+      "title": "FleetStrike",
+      "description": "FleetStrike project.",
+      "overview": "A naval combat simulation experience featuring warship selection, fleet configuration, ship equipment, and mission-based gameplay. It includes single-player naval operations, team combat, tactical navigation interfaces, ship status indicators, combat statistics, and mission victory screens.",
+      "image": "/project_images/43-FleetStrike/1.png",
+      "screenshots": [
+        "/project_images/43-FleetStrike/1.png",
+        "/project_images/43-FleetStrike/2.png",
+        "/project_images/43-FleetStrike/3.png",
+        "/project_images/43-FleetStrike/4.png",
+        "/project_images/43-FleetStrike/5.png",
+        "/project_images/43-FleetStrike/6.png",
+        "/project_images/43-FleetStrike/7.png",
+        "/project_images/43-FleetStrike/8.png",
+        "/project_images/43-FleetStrike/9.png",
+        "/project_images/43-FleetStrike/10.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "GameDev",
+        "AR/VR&XR"
+      ]
+    },
+    {
+      "id": "ironfront",
+      "title": "IronFront",
+      "description": "IronFront project.",
+      "overview": "A tactical ground combat game experience focused on squad-based military operations and competitive gameplay. It features single-player missions, team operations, online combat, tactical maps, squad selection, objective-based missions, battlefield navigation, and coordinated combat interfaces.",
+      "image": "/project_images/44-IronFront/1.png",
+      "screenshots": [
+        "/project_images/44-IronFront/1.png",
+        "/project_images/44-IronFront/2.png",
+        "/project_images/44-IronFront/3.png",
+        "/project_images/44-IronFront/4.png",
+        "/project_images/44-IronFront/5.png",
+        "/project_images/44-IronFront/6.png",
+        "/project_images/44-IronFront/7.png",
+        "/project_images/44-IronFront/8.png",
+        "/project_images/44-IronFront/9.png",
+        "/project_images/44-IronFront/10.png"
+      ],
+      "technologies": [],
+      "tags": [
+        "GameDev"
+      ]
+    }
+  ]
+}

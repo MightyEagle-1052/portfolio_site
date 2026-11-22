@@ -9,7 +9,9 @@ import {
   Brain,
   ScanLine,
 } from "lucide-react";
-import { PROFILE, LINKS, DOMAINS } from "@/data/site";
+import { PROFILE, LINKS, DOMAINS, IMAGES } from "@/data/site";
+
+const DEFAULT_HERO_IMAGE = "/ai-vision-hero.png";
 import { PROJECTS } from "@/data/projects";
 import { scrollToId } from "@/hooks/useInView";
 import NeuralCanvas from "./NeuralCanvas";
@@ -110,8 +112,12 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-[1.35rem]">
               <div className="relative aspect-[4/5] overflow-hidden bg-slate-950">
                 <img
-                  src="/ai-vision-hero.png"
-                  alt="A person exploring a futuristic digital world filled with AI, virtual reality, and 3D landscapes"
+                  src={IMAGES.hero || DEFAULT_HERO_IMAGE}
+                  alt={
+                    IMAGES.hero
+                      ? `${PROFILE.name} — ${PROFILE.role}`
+                      : "A person exploring a futuristic digital world filled with AI, virtual reality, and 3D landscapes"
+                  }
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>

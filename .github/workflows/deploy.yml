@@ -32,11 +32,14 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: front/package-lock.json
 
       - name: Install dependencies
+        working-directory: front
         run: npm ci
 
       - name: Build website
+        working-directory: front
         run: npm run build
 
       - name: Configure GitHub Pages
@@ -45,7 +48,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: ./front/dist
 
       - name: Deploy website
         id: deployment
