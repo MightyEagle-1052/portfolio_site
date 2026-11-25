@@ -38,7 +38,9 @@
         "Motion Tracking",
         "Deep Learning",
         "AI Analytics"
-      ]
+      ],
+      "visible": false,
+      "highlight": ""
     },
     {
       "key": "cg",
@@ -56,7 +58,9 @@
         "GeoPandas",
         "GDAL",
         "Rasterio"
-      ]
+      ],
+      "visible": true,
+      "highlight": ""
     },
     {
       "key": "xr",
@@ -71,7 +75,9 @@
         "Virtual Reality",
         "Augmented Reality",
         "Interactive 3D Experiences"
-      ]
+      ],
+      "visible": true,
+      "highlight": ""
     },
     {
       "key": "game",
@@ -87,7 +93,9 @@
         "Multiplayer Systems",
         "3D Environments",
         "Shaders"
-      ]
+      ],
+      "visible": true,
+      "highlight": ""
     }
   ],
   "skillCategories": [

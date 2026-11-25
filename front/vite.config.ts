@@ -19,7 +19,9 @@ const siteMetaPlugin = () => ({
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/',
+  // "/" when the portfolio server serves the site; the GitHub Pages workflow sets
+  // BASE_PATH (e.g. "/portfolio_site/") because Pages serves it under the repo name.
+  base: process.env.BASE_PATH || '/',
   server: {
     host: "::",
     port: 8080,

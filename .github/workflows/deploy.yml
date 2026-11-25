@@ -16,23 +16,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  # Build the public site (front/) as static files. The admin and server need Node
+  # and are not deployed here: GitHub Pages only hosts static files.
+  build:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: front/package-lock.json
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v6
 
       - name: Install dependencies
         working-directory: front
@@ -40,16 +42,27 @@ jobs:
 
       - name: Build website
         working-directory: front
+        env:
+          # Pages serves the site under /<repo-name>/ (or / with a custom domain).
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
         run: npm run build
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Upload website
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./front/dist
 
+  # Separate job so a failed deploy can be re-run on its own ("Re-run failed jobs")
+  # without uploading a second copy of the site.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy website
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Search, X, LayoutGrid, SearchX, RotateCcw, ArrowUpRight, Star, ChevronDown } from 'lucide-react';
-import { TAGS, type Tag } from '@/data/site';
+import { ORDERED_TAGS, type Tag } from '@/data/site';
 import { ORDERED_PROJECTS, FEATURED_PROJECTS, PROJECTS, countByTag, filterProjects, type Project } from '@/data/projects';
 import { scrollToId } from '@/hooks/useInView';
 import { SectionHeading, Reveal, TagBadge, DOMAIN_ICONS } from './Shared';
@@ -153,7 +153,7 @@ export default function Projects({
                 <LayoutGrid className="h-4 w-4" /> All Projects
                 <span className={`rounded-md px-1.5 text-xs ${allActive ? 'bg-background/20' : 'bg-secondary'}`}>{PROJECTS.length}</span>
               </button>
-              {TAGS.map((t) => {
+              {ORDERED_TAGS.map((t) => {
                 const active = selectedTags.includes(t);
                 const d = domainByTag(t)!;
                 const Icon = DOMAIN_ICONS[d.key];

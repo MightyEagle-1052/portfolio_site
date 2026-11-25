@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SKILL_CATEGORIES, DOMAINS, type Skill } from '@/data/site';
+import { SKILL_CATEGORIES, domainByKey, type Skill } from '@/data/site';
 import { SectionHeading, Reveal, DOMAIN_ICONS } from './Shared';
 
 function SkillLogo({ skill, size = 'md' }: { skill: Skill; size?: 'md' | 'lg' }) {
@@ -31,7 +31,7 @@ function SkillLogo({ skill, size = 'md' }: { skill: Skill; size?: 'md' | 'lg' })
   );
 }
 
-const domainAccent = (key: string) => DOMAINS.find((d) => d.key === key)?.accent;
+const domainAccent = (key: string) => domainByKey(key)?.accent;
 
 export default function Skills() {
   const marquee = Array.from(

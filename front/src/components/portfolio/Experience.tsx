@@ -1,5 +1,5 @@
 import { Briefcase, ArrowUpRight } from 'lucide-react';
-import { EXPERIENCE, CAPABILITIES, DOMAINS, PROFILE, type Tag } from '@/data/site';
+import { EXPERIENCE, CAPABILITIES, DOMAINS, PROFILE, domainByKey, type Tag } from '@/data/site';
 import { PROJECTS } from '@/data/projects';
 import { SectionHeading, Reveal, DOMAIN_ICONS, TechChip } from './Shared';
 
@@ -53,7 +53,7 @@ export default function Experience({ onViewTag }: { onViewTag: (tag: Tag) => voi
                     </TimelineItem>
                   ))
                 : CAPABILITIES.map((c, i) => {
-                    const d = DOMAINS.find((x) => x.key === c.domain)!;
+                    const d = domainByKey(c.domain)!;
                     const Icon = DOMAIN_ICONS[c.domain];
                     return (
                       <TimelineItem key={c.title} index={i} icon={<Icon className={`h-5 w-5 ${d.accent.text}`} />}>

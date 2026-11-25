@@ -1,11 +1,12 @@
 const TOKEN_KEY = 'portfolio_admin_token';
 
 export const TAGS = ['AI&CV', 'CG&3D', 'AR/VR&XR', 'GameDev'];
+// defaultHighlight mirrors the site's default hero badge text (front/src/data/site.ts).
 export const DOMAINS = [
-  { key: 'ai', label: 'AI & Computer Vision' },
-  { key: 'cg', label: 'Computer Graphics & 3D' },
-  { key: 'xr', label: 'AR/VR & XR' },
-  { key: 'game', label: 'Game Development' },
+  { key: 'ai', label: 'AI & Computer Vision', defaultHighlight: 'YOLO · OpenCV · PyTorch' },
+  { key: 'cg', label: 'Computer Graphics & 3D', defaultHighlight: '3D Worlds · GIS · Visualization' },
+  { key: 'xr', label: 'AR/VR & XR', defaultHighlight: 'WebXR · OpenXR · AR Foundation' },
+  { key: 'game', label: 'Game Development', defaultHighlight: 'Unity · C# · Unreal Engine' },
 ];
 
 export function getToken() {

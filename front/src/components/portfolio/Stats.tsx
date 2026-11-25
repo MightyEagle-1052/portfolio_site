@@ -39,7 +39,7 @@ export default function Stats() {
 
   const stats = [
     { icon: CalendarClock, value: PROFILE.yearsExperience, suffix: '+', label: 'Years of Experience', note: 'Professional software development' },
-    { icon: Layers, value: DOMAINS.length, suffix: '', label: 'Technical Domains', note: 'AI&CV · CG&3D · AR/VR&XR · GameDev' },
+    { icon: Layers, value: DOMAINS.length, suffix: '', label: 'Technical Domains', note: DOMAINS.map((d) => d.tag).join(' · ') },
     {
       icon: FolderKanban,
       value: projectCount,

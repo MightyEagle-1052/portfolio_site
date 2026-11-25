@@ -9,7 +9,7 @@ import {
   Mail,
 } from "lucide-react";
 import type { Project } from "@/data/projects";
-import { DOMAINS } from "@/data/site";
+import { ALL_DOMAINS } from "@/data/site";
 import { TagBadge, TechChip } from "./Shared";
 
 export default function ProjectModal({
@@ -63,7 +63,7 @@ export default function ProjectModal({
   const skills = project.technologies.length > 0
     ? project.technologies
     : [...new Set(
-        DOMAINS
+        ALL_DOMAINS
           .filter((domain) => project.tags.includes(domain.tag))
           .flatMap((domain) => domain.technologies),
       )];

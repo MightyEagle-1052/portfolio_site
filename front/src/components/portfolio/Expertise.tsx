@@ -4,6 +4,8 @@ import { DOMAINS, type Domain, type Tag } from '@/data/site';
 import { countByTag } from '@/data/projects';
 import { SectionHeading, Reveal, DOMAIN_ICONS } from './Shared';
 
+const COUNT_WORDS: Record<number, string> = { 1: 'One', 2: 'Two', 3: 'Three', 4: 'Four' };
+
 function ExpertiseCard({ d, index, onView }: { d: Domain; index: number; onView: (t: Tag) => void }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const Icon = DOMAIN_ICONS[d.key];
@@ -71,7 +73,8 @@ export default function Expertise({ onViewTag }: { onViewTag: (tag: Tag) => void
           eyebrow="Technical Expertise"
           title={
             <>
-              Four domains, <span className="text-gradient">one engineering mindset.</span>
+              {COUNT_WORDS[DOMAINS.length] ?? DOMAINS.length} {DOMAINS.length === 1 ? 'domain' : 'domains'},{' '}
+              <span className="text-gradient">one engineering mindset.</span>
             </>
           }
           description="From neural networks that understand images to real-time 3D worlds you can step into — these are the domains I build in every day."

@@ -96,6 +96,8 @@ export function normalizeContent(input) {
       short: str(d.short, `${w}.short`),
       description: str(d.description, `${w}.description`),
       technologies: strList(d.technologies, `${w}.technologies`),
+      visible: d.visible !== false,
+      highlight: str(d.highlight, `${w}.highlight`),
     })),
     skillCategories: list(input.skillCategories, 'skillCategories', (c, w) => ({
       title: str(c.title, `${w}.title`, { required: true }),
@@ -158,6 +160,12 @@ export function normalizeContent(input) {
       );
     }),
   };
+
+  const domainKeys = new Set();
+  for (const d of content.domains) {
+    if (domainKeys.has(d.key)) fail('domains', `area "${d.key}" is listed twice`);
+    domainKeys.add(d.key);
+  }
 
   const ids = new Set();
   for (const pr of content.projects) {

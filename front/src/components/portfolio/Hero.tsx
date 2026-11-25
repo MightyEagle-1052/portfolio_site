@@ -11,11 +11,21 @@ import {
 } from "lucide-react";
 import { PROFILE, LINKS, DOMAINS, IMAGES } from "@/data/site";
 
-const DEFAULT_HERO_IMAGE = "/ai-vision-hero.png";
 import { PROJECTS } from "@/data/projects";
+import { withBase } from "@/data/content";
 import { scrollToId } from "@/hooks/useInView";
 import NeuralCanvas from "./NeuralCanvas";
 import { DOMAIN_ICONS } from "./Shared";
+
+const DEFAULT_HERO_IMAGE = withBase("/ai-vision-hero.png");
+
+/** Positions of the floating badges around the hero image (filled in area priority order). */
+const HERO_BADGE_SLOTS: { style: React.CSSProperties; className: string }[] = [
+  { style: { left: "-6rem" }, className: "top-10" },
+  { style: { top: "9rem", right: "-6rem" }, className: "[animation-delay:-3s]" },
+  { style: { top: "16rem", left: "-8rem" }, className: "" },
+  { style: { top: "23rem", right: "-6rem" }, className: "[animation-delay:-3s]" },
+];
 
 export default function Hero() {
   return (
@@ -138,74 +148,28 @@ export default function Hero() {
             </div>
           </div>
 
-          <div
-            style={{ left: "-6rem" }}
-            className="absolute top-10 hidden rounded-2xl border border-border glass px-4 py-3 shadow-xl animate-float-y sm:block"
-          >
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-500/15 text-sky-600 dark:text-cyan-300">
-                <Brain className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-xs text-muted-foreground">AR &amp; Computer Vision</p>
-                <p className="text-sm font-semibold">YOLO · OpenCV · PyTorch</p>
+          {/* Floating badges: the top visible areas of expertise, in priority order. */}
+          {DOMAINS.slice(0, HERO_BADGE_SLOTS.length).map((d, i) => {
+            const Icon = DOMAIN_ICONS[d.key];
+            const slot = HERO_BADGE_SLOTS[i];
+            return (
+              <div
+                key={d.key}
+                style={slot.style}
+                className={`absolute hidden rounded-2xl border border-border glass px-4 py-3 shadow-xl animate-float-y sm:block ${slot.className}`}
+              >
+                <div className="flex items-center gap-3">
+                  <span className={`flex h-9 w-9 items-center justify-center rounded-lg ${d.accent.bg} ${d.accent.text}`}>
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-xs text-muted-foreground">{d.title}</p>
+                    <p className="text-sm font-semibold">{d.highlight}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div
-            style={{ top: "9rem", right: "-6rem" }}
-            className="absolute hidden rounded-2xl border border-border glass px-4 py-3 shadow-xl animate-float-y [animation-delay:-3s] sm:block"
-          >
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-500/15 text-violet-600 dark:text-violet-300">
-                <Box className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-xs text-muted-foreground">
-                  Computer Graphics & 3D GIS
-                </p>
-                <p className="text-sm font-semibold">
-                  3D Worlds · GIS · Visualization
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ top: "16rem", left: "-8rem" }}
-            className="absolute hidden rounded-2xl border border-border glass px-4 py-3 shadow-xl animate-float-y sm:block"
-          >
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-500/15 text-sky-600 dark:text-cyan-300">
-                <Glasses className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-xs text-muted-foreground">
-                  AR/VR & XR Development
-                </p>
-                <p className="text-sm font-semibold">
-                  WebXR · OpenXR · AR Foundation
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ top: "23rem", right: "-6rem" }}
-            className="absolute hidden rounded-2xl border border-border glass px-4 py-3 shadow-xl animate-float-y [animation-delay:-3s] sm:block"
-          >
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-500/15 text-violet-600 dark:text-violet-300">
-                <Gamepad2 className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-xs text-muted-foreground">
-                  Game Development
-                </p>
-                <p className="text-sm font-semibold">
-                  Unity · C# · Unreal Engine
-                </p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

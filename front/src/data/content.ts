@@ -35,12 +35,17 @@ export interface Links {
   booking: string;
 }
 
+/** An area of expertise. The array order in content.json is the display priority. */
 export interface DomainContent {
   key: DomainKey;
   title: string;
   short: string;
   description: string;
   technologies: string[];
+  /** Shown in the site's area listings. Missing means visible. */
+  visible?: boolean;
+  /** Short line on the floating hero badge (e.g. "Unity · C# · Unreal Engine"). Empty uses the default. */
+  highlight?: string;
 }
 
 export interface Skill {
@@ -109,6 +114,18 @@ export interface SiteContent {
 }
 
 export const BUNDLED_CONTENT = bundled as SiteContent;
+
+/**
+ * Prefix a site-relative path ("/project_images/…", "/uploads/…") with the base path the
+ * site is deployed under, e.g. "/portfolio_site/" on GitHub Pages ("/" on the own server).
+ * Full URLs and empty values are returned unchanged. Content keeps plain "/…" paths.
+ */
+export function withBase(path: string): string;
+export function withBase(path: string | undefined): string | undefined;
+export function withBase(path?: string): string | undefined {
+  if (!path || !path.startsWith('/') || path.startsWith('//')) return path;
+  return import.meta.env.BASE_URL.replace(/\/$/, '') + path;
+}
 
 /** Fetch live content when VITE_CONTENT_URL is configured; otherwise resolve to null. */
 export async function fetchLiveContent(timeoutMs = 4000): Promise<SiteContent | null> {

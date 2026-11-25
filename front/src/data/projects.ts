@@ -3,7 +3,7 @@
  * `content.json`. `featuredRank` (1 = first) places a project in the Featured area.
  * Optional fields (role, overview, features, screenshots, liveDemo, github) are hidden when empty.
  */
-import { BUNDLED_CONTENT, type Project, type SiteContent, type Tag } from './content';
+import { BUNDLED_CONTENT, withBase, type Project, type SiteContent, type Tag } from './content';
 
 export type { Project };
 
@@ -15,7 +15,11 @@ export let FEATURED_PROJECTS: Project[];
 export let ORDERED_PROJECTS: Project[];
 
 export function applyProjectContent(content: SiteContent) {
-  PROJECTS = content.projects;
+  PROJECTS = content.projects.map((p) => ({
+    ...p,
+    image: withBase(p.image),
+    screenshots: p.screenshots?.map((s) => withBase(s)),
+  }));
   EXPECTED_PROJECT_COUNT = PROJECTS.length;
   FEATURED_PROJECTS = PROJECTS.filter((p) => p.featuredRank).sort(
     (a, b) => (a.featuredRank ?? 99) - (b.featuredRank ?? 99),
