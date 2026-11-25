@@ -51,8 +51,13 @@ cd front  && npm run dev     # site on :8080
 Open http://localhost:8080 for the site and http://localhost:8080/admin for the admin, the same layout as production.
 The site reloads automatically when you save in the admin.
 
-## GitHub Pages (static copy)
+## GitHub Pages and Netlify (static copies)
 
-The GitHub Actions workflow still builds `front/` and publishes it to GitHub Pages using the bundled `content.json`.
-GitHub Pages can't run the server, so `/admin` only works on your own server.
-To update the Pages copy, commit `front/src/data/content.json` (and `front/public/uploads`) and push.
+Both hosts publish only the public site (`front/`), built with the bundled `content.json`. They can't run
+the server, so `/admin` only works on your own server. To update them, commit `front/src/data/content.json`
+(and `front/public/uploads`) and push to `main`. Each host rebuilds on every push.
+
+- **GitHub Pages:** `.github/workflows/deploy.yml` builds the site for the `/portfolio_site/` sub-path.
+  Live at https://mightyeagle-1052.github.io/portfolio_site/
+- **Netlify:** `netlify.toml` tells Netlify to install and build inside `front/` and publish `front/dist`.
+  It overrides the build settings in the Netlify dashboard, so you don't need to set those yourself.
