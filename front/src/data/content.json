@@ -62,8 +62,8 @@
     },
     {
       "key": "cg",
-      "title": "Computer Graphics & 3D GIS",
-      "short": "Computer Graphics, 3D Modeling & 3D GIS",
+      "title": "Interactive 3D & CAD|BIM|GIS",
+      "short": "Interactive 3D & 3D CAD | 3D BIM | 3D GIS",
       "description": "Real-time 3D rendering, modeling and geospatial visualization — from interactive web scenes to digital twins of entire cities.",
       "technologies": [
         "Three.js",
