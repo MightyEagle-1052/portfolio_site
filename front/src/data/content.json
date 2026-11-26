@@ -25,8 +25,8 @@
   "domains": [
     {
       "key": "game",
-      "title": "Game Development",
-      "short": "Game Development",
+      "title": "3D Game Development",
+      "short": "3D Game Development | Unity, UE5+, WebGL/Three.js, Roblox",
       "description": "Interactive games and real-time worlds with solid mechanics, networked multiplayer and polished visuals.",
       "technologies": [
         "Unity",
