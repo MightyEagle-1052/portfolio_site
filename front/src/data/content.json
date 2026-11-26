@@ -24,6 +24,24 @@
   },
   "domains": [
     {
+      "key": "game",
+      "title": "Game Development",
+      "short": "Game Development",
+      "description": "Interactive games and real-time worlds with solid mechanics, networked multiplayer and polished visuals.",
+      "technologies": [
+        "Unity",
+        "C#",
+        "Unreal Engine",
+        "C++",
+        "Game Mechanics",
+        "Multiplayer Systems",
+        "3D Environments",
+        "Shaders"
+      ],
+      "visible": true,
+      "highlight": ""
+    },
+    {
       "key": "ai",
       "title": "AI & Computer Vision",
       "short": "Artificial Intelligence & Computer Vision",
@@ -75,24 +93,6 @@
         "Virtual Reality",
         "Augmented Reality",
         "Interactive 3D Experiences"
-      ],
-      "visible": true,
-      "highlight": ""
-    },
-    {
-      "key": "game",
-      "title": "Game Development",
-      "short": "Game Development",
-      "description": "Interactive games and real-time worlds with solid mechanics, networked multiplayer and polished visuals.",
-      "technologies": [
-        "Unity",
-        "C#",
-        "Unreal Engine",
-        "C++",
-        "Game Mechanics",
-        "Multiplayer Systems",
-        "3D Environments",
-        "Shaders"
       ],
       "visible": true,
       "highlight": ""
