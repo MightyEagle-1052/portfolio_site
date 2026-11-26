@@ -24,72 +24,6 @@
   },
   "domains": [
     {
-      "key": "game",
-      "tag": "3DGameDev",
-      "color": "green",
-      "icon": "gamepad",
-      "title": "3D Game Development",
-      "short": "3D Game Development | Unity, UE5+, WebGL/Three.js, Roblox",
-      "description": "Interactive games and real-time worlds with solid mechanics, networked multiplayer and polished visuals.",
-      "technologies": [
-        "Unity",
-        "Unreal Engine",
-        "C++",
-        "Game Mechanics",
-        "Multiplayer Systems",
-        "3D Environments",
-        "Shaders",
-        "C#"
-      ],
-      "visible": false,
-      "highlight": "Unity · UE5+ · WebGL/Three.js"
-    },
-    {
-      "key": "ai",
-      "tag": "AI&CV",
-      "color": "cyan",
-      "icon": "brain",
-      "title": "AI & Computer Vision",
-      "short": "Artificial Intelligence & Computer Vision",
-      "description": "Intelligent visual systems that detect, segment, track and analyze — turning images and video into actionable insight.",
-      "technologies": [
-        "Python",
-        "OpenCV",
-        "PyTorch",
-        "YOLO",
-        "Object Detection",
-        "Image Segmentation",
-        "Motion Tracking",
-        "Deep Learning",
-        "AI Analytics"
-      ],
-      "visible": true,
-      "highlight": ""
-    },
-    {
-      "key": "cg",
-      "tag": "CG&3D",
-      "color": "violet",
-      "icon": "map",
-      "title": "Interactive 3D & CAD|BIM|GIS",
-      "short": "Interactive 3D & 3D CAD | 3D BIM | 3D GIS",
-      "description": "Real-time 3D rendering, modeling and geospatial visualization — from interactive web scenes to digital twins of entire cities.",
-      "technologies": [
-        "Three.js",
-        "WebGL",
-        "React Three Fiber",
-        "Blender",
-        "SketchUp",
-        "Autodesk 3ds Max",
-        "CesiumJS",
-        "GeoPandas",
-        "GDAL",
-        "Rasterio"
-      ],
-      "visible": true,
-      "highlight": ""
-    },
-    {
       "key": "xr",
       "tag": "AR/VR&XR",
       "color": "blue",
@@ -113,7 +47,7 @@
   "skillCategories": [
     {
       "title": "AI & Machine Learning",
-      "domain": "ai",
+      "domain": "xr",
       "skills": [
         {
           "name": "Python",
@@ -133,7 +67,7 @@
     },
     {
       "title": "Computer Vision",
-      "domain": "ai",
+      "domain": "xr",
       "skills": [
         {
           "name": "OpenCV",
@@ -155,7 +89,7 @@
     },
     {
       "title": "Computer Graphics",
-      "domain": "cg",
+      "domain": "xr",
       "skills": [
         {
           "name": "Three.js",
@@ -176,7 +110,7 @@
     },
     {
       "title": "3D Modeling & Visualization",
-      "domain": "cg",
+      "domain": "xr",
       "skills": [
         {
           "name": "Blender",
@@ -192,7 +126,7 @@
     },
     {
       "title": "GIS & Geospatial Technologies",
-      "domain": "cg",
+      "domain": "xr",
       "skills": [
         {
           "name": "CesiumJS"
@@ -228,7 +162,7 @@
     },
     {
       "title": "Game Development",
-      "domain": "game",
+      "domain": "xr",
       "skills": [
         {
           "name": "Unity",
@@ -272,12 +206,12 @@
   ],
   "capabilities": [
     {
-      "domain": "ai",
+      "domain": "xr",
       "title": "Intelligent Visual Systems",
       "text": "Designing computer vision pipelines for detection, segmentation and motion tracking, and turning their output into analytics."
     },
     {
-      "domain": "cg",
+      "domain": "xr",
       "title": "3D Visualization & Geospatial Platforms",
       "text": "Building real-time 3D scenes, product visualizers and 3D GIS platforms that make complex spatial data explorable."
     },
@@ -287,7 +221,7 @@
       "text": "Creating augmented and virtual reality applications that bring interactive 3D content into real and virtual spaces."
     },
     {
-      "domain": "game",
+      "domain": "xr",
       "title": "Interactive Games & Real-Time Worlds",
       "text": "Developing game mechanics, multiplayer systems and 3D environments with Unity and Unreal Engine."
     }
@@ -311,9 +245,7 @@
         "/project_images/1-GoalTrack/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ],
+      "tags": [],
       "featuredRank": 1
     },
     {
@@ -333,9 +265,7 @@
         "/project_images/2-CourtTrack/9.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "volleytrack",
@@ -352,9 +282,7 @@
         "/project_images/3-VolleyTrack/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "diamondscope",
@@ -373,9 +301,7 @@
         "/project_images/4-DiamondScope/9.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "tt-vision-analyzer",
@@ -393,9 +319,7 @@
         "/project_images/5-TTVision/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "badminton-analysis-system",
@@ -412,9 +336,7 @@
         "/project_images/6-ShuttleTrack/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "acetrack",
@@ -431,9 +353,7 @@
         "/project_images/7-AceTrack/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "golfvision",
@@ -449,9 +369,7 @@
         "/project_images/8-GolfVision/6.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "cricketvision",
@@ -469,9 +387,7 @@
         "/project_images/9-CricketVision/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "cuemetric",
@@ -488,9 +404,7 @@
         "/project_images/10-CueMetric/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "boxvision",
@@ -508,9 +422,7 @@
         "/project_images/11-BoxVision/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "radiology-medical-imaging",
@@ -526,9 +438,7 @@
         "/project_images/12-Radiology AI Imaging/6.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ],
+      "tags": [],
       "featuredRank": 2
     },
     {
@@ -546,9 +456,7 @@
         "/project_images/13-Ophthalmology/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "skincare",
@@ -566,9 +474,7 @@
         "/project_images/14-SkinCare/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "orthopedics-musculoskeletal-imaging",
@@ -586,9 +492,7 @@
         "/project_images/15-AI Orthopedic Imaging/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "digital-pathology",
@@ -605,9 +509,7 @@
         "/project_images/16-Digital Pathology AI/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "heartcare",
@@ -625,9 +527,7 @@
         "/project_images/17-HeartCare/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "lungcare",
@@ -645,9 +545,7 @@
         "/project_images/18-LungCare/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "neurovision",
@@ -665,9 +563,7 @@
         "/project_images/19-NeuroVision/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "roadguard",
@@ -685,9 +581,7 @@
         "/project_images/20-RoadGuard/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ],
+      "tags": [],
       "featuredRank": 3
     },
     {
@@ -705,9 +599,7 @@
         "/project_images/21-MarketSurveillance/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "aeroguard-ai",
@@ -723,9 +615,7 @@
         "/project_images/22-AeroGuard/6.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "cash-surveillance",
@@ -741,9 +631,7 @@
         "/project_images/23-CashSurveillance/6.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "drone-sentinel",
@@ -761,9 +649,7 @@
         "/project_images/24-DroneSentinel/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "faceguard",
@@ -781,9 +667,7 @@
         "/project_images/25-FaceGuard/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "smart-city-monitor",
@@ -801,9 +685,7 @@
         "/project_images/26-SmartCityMonitor/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "careguard-ai",
@@ -821,9 +703,7 @@
         "/project_images/27-CareGuard/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "sitesafe-ai",
@@ -841,9 +721,7 @@
         "/project_images/28-SiteSafe/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "warehouse-safety-ai",
@@ -861,9 +739,7 @@
         "/project_images/29-WarehouseSafety/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "agriplant-vision",
@@ -880,9 +756,7 @@
         "/project_images/30-AgriPlantVision/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ],
+      "tags": [],
       "featuredRank": 4
     },
     {
@@ -900,9 +774,7 @@
         "/project_images/31-MicroLab/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "wildscope-vision",
@@ -919,9 +791,7 @@
         "/project_images/32-WildScope/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "marinevision-ai",
@@ -938,9 +808,7 @@
         "/project_images/33-MarineVision/7.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV"
-      ]
+      "tags": []
     },
     {
       "id": "geourban-insight",
@@ -961,10 +829,7 @@
         "/project_images/34-GeoUrban/10.png"
       ],
       "technologies": [],
-      "tags": [
-        "AI&CV",
-        "CG&3D"
-      ],
+      "tags": [],
       "featuredRank": 5
     },
     {
@@ -984,9 +849,7 @@
         "/project_images/35-ForgeMotion/8.png"
       ],
       "technologies": [],
-      "tags": [
-        "CG&3D"
-      ]
+      "tags": []
     },
     {
       "id": "carrental",
@@ -1008,9 +871,7 @@
       ],
       "technologies": [],
       "tags": [
-        "AR/VR&XR",
-        "AI&CV",
-        "CG&3D"
+        "AR/VR&XR"
       ],
       "featuredRank": 6
     },
@@ -1033,7 +894,6 @@
       ],
       "technologies": [],
       "tags": [
-        "AI&CV",
         "AR/VR&XR"
       ]
     },
@@ -1052,9 +912,7 @@
         "/project_images/38-SeatVista/6.png"
       ],
       "technologies": [],
-      "tags": [
-        "CG&3D"
-      ]
+      "tags": []
     },
     {
       "id": "diy-design-space",
@@ -1076,9 +934,7 @@
         "/project_images/39-DIYDesignSpace/11.png"
       ],
       "technologies": [],
-      "tags": [
-        "CG&3D"
-      ],
+      "tags": [],
       "featuredRank": 7
     },
     {
@@ -1103,9 +959,7 @@
         "/project_images/40-Fabuwood/13.png"
       ],
       "technologies": [],
-      "tags": [
-        "CG&3D"
-      ],
+      "tags": [],
       "featuredRank": 8
     },
     {
@@ -1128,7 +982,6 @@
       ],
       "technologies": [],
       "tags": [
-        "3DGameDev",
         "AR/VR&XR"
       ],
       "featuredRank": 9
@@ -1153,7 +1006,6 @@
       ],
       "technologies": [],
       "tags": [
-        "3DGameDev",
         "AR/VR&XR"
       ]
     },
@@ -1177,7 +1029,6 @@
       ],
       "technologies": [],
       "tags": [
-        "3DGameDev",
         "AR/VR&XR"
       ]
     },
@@ -1200,9 +1051,7 @@
         "/project_images/44-IronFront/10.png"
       ],
       "technologies": [],
-      "tags": [
-        "3DGameDev"
-      ]
+      "tags": []
     }
   ]
 }
