@@ -25,7 +25,7 @@
   "domains": [
     {
       "key": "game",
-      "tag": "GameDev",
+      "tag": "3DGameDev",
       "color": "green",
       "icon": "gamepad",
       "title": "3D Game Development",
@@ -41,7 +41,7 @@
         "Shaders",
         "C#"
       ],
-      "visible": true,
+      "visible": false,
       "highlight": "Unity · UE5+ · WebGL/Three.js"
     },
     {
@@ -1128,7 +1128,7 @@
       ],
       "technologies": [],
       "tags": [
-        "GameDev",
+        "3DGameDev",
         "AR/VR&XR"
       ],
       "featuredRank": 9
@@ -1153,7 +1153,7 @@
       ],
       "technologies": [],
       "tags": [
-        "GameDev",
+        "3DGameDev",
         "AR/VR&XR"
       ]
     },
@@ -1177,7 +1177,7 @@
       ],
       "technologies": [],
       "tags": [
-        "GameDev",
+        "3DGameDev",
         "AR/VR&XR"
       ]
     },
@@ -1201,7 +1201,7 @@
       ],
       "technologies": [],
       "tags": [
-        "GameDev"
+        "3DGameDev"
       ]
     }
   ]
