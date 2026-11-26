@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SKILL_CATEGORIES, domainByKey, type Skill } from '@/data/site';
-import { SectionHeading, Reveal, DOMAIN_ICONS } from './Shared';
+import { SectionHeading, Reveal, categoryIcon } from './Shared';
 
 function SkillLogo({ skill, size = 'md' }: { skill: Skill; size?: 'md' | 'lg' }) {
   const [failed, setFailed] = useState(false);
@@ -53,7 +53,7 @@ export default function Skills() {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {SKILL_CATEGORIES.map((cat, i) => {
-            const Icon = DOMAIN_ICONS[cat.domain];
+            const Icon = categoryIcon(cat.domain);
             const accent = domainAccent(cat.domain);
             return (
               <Reveal key={cat.title} delay={(i % 4) * 80} className="h-full">

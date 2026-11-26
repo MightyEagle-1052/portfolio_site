@@ -4,7 +4,7 @@ import { config } from './config.js';
 import { serializeContent } from '../../shared/content-schema.mjs';
 
 // Validation is shared with the admin's GitHub mode, which saves without this server.
-export { TAGS, DOMAIN_KEYS, ValidationError, normalizeContent } from '../../shared/content-schema.mjs';
+export { ValidationError, normalizeContent } from '../../shared/content-schema.mjs';
 
 export async function readContent() {
   return JSON.parse(await fs.readFile(config.contentFile, 'utf8'));

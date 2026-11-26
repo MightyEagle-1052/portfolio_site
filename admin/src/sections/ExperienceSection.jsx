@@ -1,7 +1,5 @@
 import { Text, Area, Chips, Lines, Select, ObjectList, ImageField } from '../components/fields.jsx';
-import { DOMAINS } from '../api.js';
-
-const DOMAIN_OPTIONS = DOMAINS.map((d) => ({ value: d.key, label: d.label }));
+import { areaOptions } from '../api.js';
 
 export function ExperienceSection({ draft, setKey }) {
   return (
@@ -30,17 +28,19 @@ export function ExperienceSection({ draft, setKey }) {
 
       <section className="panel">
         <h2>Capabilities</h2>
-        <p className="muted">Professional capability cards in the Experience section.</p>
+        <p className="muted">
+          Professional capability cards in the Experience section. The site shows them only while Work experience above is empty.
+        </p>
         <ObjectList
           items={draft.capabilities}
           onChange={(v) => setKey('capabilities', v)}
           titleOf={(c) => c.title}
-          newItem={() => ({ domain: 'ai', title: '', text: '' })}
+          newItem={() => ({ domain: draft.domains[0]?.key, title: '', text: '' })}
           addLabel="Add capability"
           renderItem={(c, update) => (
             <>
               <Text label="Title" value={c.title} onChange={(v) => update({ title: v })} />
-              <Select label="Domain" value={c.domain} onChange={(v) => update({ domain: v })} options={DOMAIN_OPTIONS} />
+              <Select label="Area" value={c.domain} onChange={(v) => update({ domain: v })} options={areaOptions(draft.domains)} />
               <Area label="Text" value={c.text} onChange={(v) => update({ text: v })} rows={3} />
             </>
           )}

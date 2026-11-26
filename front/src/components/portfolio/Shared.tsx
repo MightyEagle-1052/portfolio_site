@@ -1,7 +1,38 @@
 import React from 'react';
-import { Brain, Box, Glasses, Gamepad2, Code2, Linkedin, Github } from 'lucide-react';
-import type { DomainKey } from '@/data/site';
-import { domainByTag, PROFILE } from '@/data/site';
+import {
+  BarChart3,
+  Bot,
+  Box,
+  Brain,
+  Camera,
+  Car,
+  Cloud,
+  Code2,
+  Cpu,
+  Database,
+  Factory,
+  Gamepad2,
+  Github,
+  Glasses,
+  Globe,
+  GraduationCap,
+  Layers,
+  Leaf,
+  Linkedin,
+  Map as MapIcon,
+  Microscope,
+  Music,
+  Palette,
+  Plane,
+  Rocket,
+  Server,
+  Shield,
+  Smartphone,
+  Sparkles,
+  Stethoscope,
+  Wrench,
+} from 'lucide-react';
+import { domainByKey, domainByTag, PROFILE } from '@/data/site';
 
 /** Logo letters: the saved monogram, or the name's initials when it's empty. */
 const monogramText = () =>
@@ -15,13 +46,46 @@ const monogramText = () =>
     .toUpperCase();
 import { useInView } from '@/hooks/useInView';
 
-export const DOMAIN_ICONS: Record<DomainKey | 'web', React.ComponentType<{ className?: string }>> = {
-  ai: Brain,
-  cg: Box,
-  xr: Glasses,
-  game: Gamepad2,
-  web: Code2,
+type IconComponent = React.ComponentType<{ className?: string }>;
+
+/** The icons an area can use, chosen in the admin. Same names as AREA_ICONS in shared/content-schema.mjs. */
+const AREA_ICONS: Record<string, IconComponent> = {
+  brain: Brain,
+  box: Box,
+  glasses: Glasses,
+  gamepad: Gamepad2,
+  code: Code2,
+  cpu: Cpu,
+  database: Database,
+  cloud: Cloud,
+  phone: Smartphone,
+  globe: Globe,
+  shield: Shield,
+  chart: BarChart3,
+  palette: Palette,
+  bot: Bot,
+  layers: Layers,
+  rocket: Rocket,
+  wrench: Wrench,
+  server: Server,
+  camera: Camera,
+  map: MapIcon,
+  microscope: Microscope,
+  stethoscope: Stethoscope,
+  car: Car,
+  plane: Plane,
+  factory: Factory,
+  leaf: Leaf,
+  music: Music,
+  graduation: GraduationCap,
+  sparkles: Sparkles,
 };
+
+/** Icon component for an area's icon name. */
+export const iconFor = (name?: string): IconComponent => (name && AREA_ICONS[name]) || Sparkles;
+
+/** Icon for a skill category: its area's icon, or a code icon for the Web Development style. */
+export const categoryIcon = (domain: string): IconComponent => (domain === 'web' ? Code2 : iconFor(domainByKey(domain)?.icon));
 
 export function SectionHeading({
   eyebrow,
@@ -61,7 +125,7 @@ export function Reveal({ children, className = '', delay = 0 }: { children: Reac
 
 export function TagBadge({ tag, size = 'sm' }: { tag: string; size?: 'sm' | 'xs' }) {
   const d = domainByTag(tag);
-  const Icon = d ? DOMAIN_ICONS[d.key] : Code2;
+  const Icon = d ? iconFor(d.icon) : Code2;
   return (
     <span
       className={`inline-flex items-center gap-1 rounded-full font-semibold ring-1 ring-inset ${d?.accent.bg} ${d?.accent.text} ${d?.accent.ring} ${

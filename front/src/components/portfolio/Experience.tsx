@@ -1,7 +1,7 @@
 import { Briefcase, ArrowUpRight } from 'lucide-react';
 import { EXPERIENCE, CAPABILITIES, DOMAINS, PROFILE, domainByKey, type Tag } from '@/data/site';
 import { PROJECTS } from '@/data/projects';
-import { SectionHeading, Reveal, DOMAIN_ICONS, TechChip } from './Shared';
+import { SectionHeading, Reveal, iconFor, TechChip } from './Shared';
 
 function TimelineItem({ index, children, icon }: { index: number; children: React.ReactNode; icon: React.ReactNode }) {
   return (
@@ -53,8 +53,9 @@ export default function Experience({ onViewTag }: { onViewTag: (tag: Tag) => voi
                     </TimelineItem>
                   ))
                 : CAPABILITIES.map((c, i) => {
-                    const d = domainByKey(c.domain)!;
-                    const Icon = DOMAIN_ICONS[c.domain];
+                    const d = domainByKey(c.domain);
+                    if (!d) return null;
+                    const Icon = iconFor(d.icon);
                     return (
                       <TimelineItem key={c.title} index={i} icon={<Icon className={`h-5 w-5 ${d.accent.text}`} />}>
                         <div className="card-surface card-hover p-6">

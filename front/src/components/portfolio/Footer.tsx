@@ -1,7 +1,7 @@
 import { ArrowUp, Linkedin, Github, CalendarDays } from 'lucide-react';
 import { PROFILE, LINKS, NAV_ITEMS, DOMAINS, type Tag } from '@/data/site';
 import { scrollToId } from '@/hooks/useInView';
-import { Monogram, DOMAIN_ICONS } from './Shared';
+import { Monogram, iconFor } from './Shared';
 
 export default function Footer({ onViewTag }: { onViewTag: (tag: Tag) => void }) {
   return (
@@ -75,7 +75,7 @@ export default function Footer({ onViewTag }: { onViewTag: (tag: Tag) => void })
             <p className="text-sm font-bold">Technical Domains</p>
             <ul className="mt-4 space-y-2.5 text-sm">
               {DOMAINS.map((d) => {
-                const Icon = DOMAIN_ICONS[d.key];
+                const Icon = iconFor(d.icon);
                 return (
                   <li key={d.key}>
                     <button onClick={() => onViewTag(d.tag)} className="group inline-flex items-center gap-2.5 text-muted-foreground transition-colors hover:text-foreground">

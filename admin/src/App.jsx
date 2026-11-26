@@ -11,6 +11,7 @@ import {
   TOKEN_HELP_URL,
   getToken,
   setToken,
+  withAreaDefaults,
 } from './api.js';
 import ProfileSection from './sections/ProfileSection.jsx';
 import ExpertiseSection from './sections/ExpertiseSection.jsx';
@@ -155,7 +156,8 @@ export default function App() {
   const load = useCallback(async () => {
     setLoadError('');
     try {
-      const content = await api.getContent();
+      // Older content has no tag/color/icon on its areas; show the ones the site uses for them.
+      const content = withAreaDefaults(await api.getContent());
       setSaved(content);
       setDraft(structuredClone(content));
     } catch (err) {

@@ -11,9 +11,8 @@
  */
 import bundled from './content.json';
 
-export const TAGS = ['AI&CV', 'CG&3D', 'AR/VR&XR', 'GameDev'] as const;
-export type Tag = (typeof TAGS)[number];
-export type DomainKey = 'ai' | 'cg' | 'xr' | 'game';
+/** A project tag: the `tag` of one of the areas of expertise, e.g. "AI&CV". */
+export type Tag = string;
 
 export interface Profile {
   name: string;
@@ -37,7 +36,14 @@ export interface Links {
 
 /** An area of expertise. The array order in content.json is the display priority. */
 export interface DomainContent {
-  key: DomainKey;
+  /** Stable id. Skill categories and capabilities point to an area by its key. */
+  key: string;
+  /** Short label used for project tags and filters. Older content leaves it out for the original four areas. */
+  tag?: string;
+  /** Color theme name (AREA_COLORS in site.ts). */
+  color?: string;
+  /** Icon name (AREA_ICONS in components/portfolio/Shared.tsx). */
+  icon?: string;
   title: string;
   short: string;
   description: string;
@@ -56,12 +62,14 @@ export interface Skill {
 
 export interface SkillCategory {
   title: string;
-  domain: DomainKey | 'web';
+  /** An area key, or 'web' for the Web Development style that belongs to no area. */
+  domain: string;
   skills: Skill[];
 }
 
 export interface Capability {
-  domain: DomainKey;
+  /** Key of the area this capability belongs to. */
+  domain: string;
   title: string;
   text: string;
 }

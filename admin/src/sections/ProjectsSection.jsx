@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { Text, Area, Chips, Lines, NumberInput, ImageField, ImageList, Thumb, Field } from '../components/fields.jsx';
-import { TAGS, slugify } from '../api.js';
+import { slugify } from '../api.js';
 
 function uniqueId(base, projects, skipIndex) {
   const taken = new Set(projects.filter((_, i) => i !== skipIndex).map((p) => p.id));
@@ -21,6 +21,10 @@ export default function ProjectsSection({ draft, setKey, notify }) {
   const setProjects = (next) => setKey('projects', next);
   const index = Math.min(selected, projects.length - 1);
   const current = projects[index];
+  // Project tags are the areas' tags (Areas of expertise), in priority order.
+  const areaTags = draft.domains.map((d) => d.tag);
+  // A tag no area has any more still shows on its project, so it can be removed.
+  const tagChoices = current ? [...areaTags, ...current.tags.filter((t) => !areaTags.includes(t))] : areaTags;
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -98,7 +102,7 @@ export default function ProjectsSection({ draft, setKey, notify }) {
           <input className="input" placeholder={`Search ${projects.length} projects…`} value={query} onChange={(e) => setQuery(e.target.value)} />
           <select className="input" value={tagFilter} onChange={(e) => setTagFilter(e.target.value)}>
             <option value="">All tags</option>
-            {TAGS.map((t) => (
+            {areaTags.map((t) => (
               <option key={t}>{t}</option>
             ))}
           </select>
@@ -176,7 +180,7 @@ export default function ProjectsSection({ draft, setKey, notify }) {
 
             <Field label="Tags" wide>
               <div className="tag-toggles">
-                {TAGS.map((t) => (
+                {tagChoices.map((t) => (
                   <label key={t} className={`tag-toggle${current.tags.includes(t) ? ' is-on' : ''}`}>
                     <input type="checkbox" checked={current.tags.includes(t)} onChange={() => toggleTag(t)} />
                     {t}

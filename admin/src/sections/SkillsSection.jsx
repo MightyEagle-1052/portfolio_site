@@ -1,7 +1,5 @@
 import { Text, Select, ObjectList, Thumb } from '../components/fields.jsx';
-import { DOMAINS } from '../api.js';
-
-const DOMAIN_OPTIONS = [...DOMAINS.map((d) => ({ value: d.key, label: d.label })), { value: 'web', label: 'Web Development' }];
+import { areaOptions } from '../api.js';
 
 function SkillRows({ skills, onChange }) {
   const update = (i, patch) => onChange(skills.map((s, j) => (j === i ? { ...s, ...patch } : s)));
@@ -36,6 +34,8 @@ function SkillRows({ skills, onChange }) {
 }
 
 export default function SkillsSection({ draft, setKey }) {
+  // 'web' is an extra style for categories that belong to no area.
+  const domainOptions = [...areaOptions(draft.domains), { value: 'web', label: 'Web Development' }];
   return (
     <section className="panel">
       <h2>Skills</h2>
@@ -44,12 +44,12 @@ export default function SkillsSection({ draft, setKey }) {
         items={draft.skillCategories}
         onChange={(v) => setKey('skillCategories', v)}
         titleOf={(c) => `${c.title} · ${c.skills.length} skills`}
-        newItem={() => ({ title: 'New category', domain: 'ai', skills: [] })}
+        newItem={() => ({ title: 'New category', domain: draft.domains[0]?.key ?? 'web', skills: [] })}
         addLabel="Add category"
         renderItem={(c, update) => (
           <>
             <Text label="Category title" value={c.title} onChange={(v) => update({ title: v })} />
-            <Select label="Color / domain" value={c.domain} onChange={(v) => update({ domain: v })} options={DOMAIN_OPTIONS} />
+            <Select label="Color / area" value={c.domain} onChange={(v) => update({ domain: v })} options={domainOptions} />
             <SkillRows skills={c.skills} onChange={(v) => update({ skills: v })} />
           </>
         )}

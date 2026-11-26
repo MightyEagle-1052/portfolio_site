@@ -3,7 +3,7 @@ import { Search, X, LayoutGrid, SearchX, RotateCcw, ArrowUpRight, Star, ChevronD
 import { ORDERED_TAGS, type Tag } from '@/data/site';
 import { ORDERED_PROJECTS, FEATURED_PROJECTS, PROJECTS, countByTag, filterProjects, type Project } from '@/data/projects';
 import { scrollToId } from '@/hooks/useInView';
-import { SectionHeading, Reveal, TagBadge, DOMAIN_ICONS } from './Shared';
+import { SectionHeading, Reveal, TagBadge, iconFor } from './Shared';
 import { domainByTag } from '@/data/site';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
@@ -156,7 +156,7 @@ export default function Projects({
               {ORDERED_TAGS.map((t) => {
                 const active = selectedTags.includes(t);
                 const d = domainByTag(t)!;
-                const Icon = DOMAIN_ICONS[d.key];
+                const Icon = iconFor(d.icon);
                 return (
                   <button
                     key={t}

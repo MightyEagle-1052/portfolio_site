@@ -2,13 +2,13 @@ import { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { DOMAINS, type Domain, type Tag } from '@/data/site';
 import { countByTag } from '@/data/projects';
-import { SectionHeading, Reveal, DOMAIN_ICONS } from './Shared';
+import { SectionHeading, Reveal, iconFor } from './Shared';
 
-const COUNT_WORDS: Record<number, string> = { 1: 'One', 2: 'Two', 3: 'Three', 4: 'Four' };
+const COUNT_WORDS = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 
 function ExpertiseCard({ d, index, onView }: { d: Domain; index: number; onView: (t: Tag) => void }) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const Icon = DOMAIN_ICONS[d.key];
+  const Icon = iconFor(d.icon);
   const count = countByTag(d.tag);
 
   const onMove = (e: React.MouseEvent) => {

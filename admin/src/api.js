@@ -13,14 +13,11 @@ export const MODE = import.meta.env.MODE === 'static' ? 'github' : 'server';
 /** The public site's address. The admin lives at <site>/admin/. */
 export const SITE_URL = import.meta.env.BASE_URL.replace(/admin\/$/, '');
 
-export const TAGS = ['AI&CV', 'CG&3D', 'AR/VR&XR', 'GameDev'];
-// defaultHighlight mirrors the site's default hero badge text (front/src/data/site.ts).
-export const DOMAINS = [
-  { key: 'ai', label: 'AI & Computer Vision', defaultHighlight: 'YOLO · OpenCV · PyTorch' },
-  { key: 'cg', label: 'Computer Graphics & 3D', defaultHighlight: '3D Worlds · GIS · Visualization' },
-  { key: 'xr', label: 'AR/VR & XR', defaultHighlight: 'WebXR · OpenXR · AR Foundation' },
-  { key: 'game', label: 'Game Development', defaultHighlight: 'Unity · C# · Unreal Engine' },
-];
+// Areas of expertise come from the content; these are the colors/icons they can use and their defaults.
+export { AREA_COLORS, AREA_ICONS, defaultHighlight, withAreaDefaults } from '../../shared/content-schema.mjs';
+
+/** Choices for "which area" selects: every area (hidden ones too), in priority order. */
+export const areaOptions = (domains) => domains.map((d) => ({ value: d.key, label: d.title || d.tag || d.key }));
 
 /* ---------- server mode ---------- */
 

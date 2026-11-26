@@ -15,7 +15,7 @@ import { PROJECTS } from "@/data/projects";
 import { withBase } from "@/data/content";
 import { scrollToId } from "@/hooks/useInView";
 import NeuralCanvas from "./NeuralCanvas";
-import { DOMAIN_ICONS } from "./Shared";
+import { iconFor } from "./Shared";
 
 const DEFAULT_HERO_IMAGE = withBase("/ai-vision-hero.png");
 
@@ -60,7 +60,7 @@ export default function Hero() {
 
           <ul className="mt-8 flex flex-wrap gap-2.5" aria-label="Highlights">
             {DOMAINS.map((d) => {
-              const Icon = DOMAIN_ICONS[d.key];
+              const Icon = iconFor(d.icon);
               return (
                 <li
                   key={d.key}
@@ -150,7 +150,7 @@ export default function Hero() {
 
           {/* Floating badges: the top visible areas of expertise, in priority order. */}
           {DOMAINS.slice(0, HERO_BADGE_SLOTS.length).map((d, i) => {
-            const Icon = DOMAIN_ICONS[d.key];
+            const Icon = iconFor(d.icon);
             const slot = HERO_BADGE_SLOTS[i];
             return (
               <div
