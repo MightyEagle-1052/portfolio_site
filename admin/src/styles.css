@@ -267,7 +267,7 @@ h3 { font-size: 14px; margin-bottom: 10px; }
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
   .sidebar { flex-direction: row; overflow-x: auto; padding: 8px; }
-  .brand, .sidebar__note { display: none; }
+  .sidebar .brand, .sidebar__note { display: none; }
   .nav-item { white-space: nowrap; }
   .sidebar__foot { margin: 0 0 0 auto; }
   .projects { grid-template-columns: 1fr; }
