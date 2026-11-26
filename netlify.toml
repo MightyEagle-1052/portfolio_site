@@ -1,20 +1,26 @@
-# Netlify builds and hosts the public site (front/) as static files.
-# The admin and the content server need Node with a writable disk, so they are
-# not deployed here; they run on your own machine or server (see README.md).
+# Netlify hosts the public site and the admin as static files:
+#   /         the site (front/)
+#   /admin/   the admin (admin/). There is no server on Netlify, so the admin signs in with a GitHub
+#             token and saves by committing to the GitHub repository; Netlify then rebuilds the site.
 # These settings override the build settings in the Netlify dashboard.
 
 [build]
-  # Install dependencies and run the build inside front/ (the repo root has no dependencies).
-  base = "front"
-  command = "npm run build"
-  # Relative to base, so this is front/dist.
-  publish = "dist"
+  # Build from the repo root: the site and the admin each install their own dependencies.
+  base = "/"
+  command = "npm run setup:static && npm run build:static"
+  publish = "front/dist"
 
 [build.environment]
   # Same Node version as the GitHub Pages workflow.
   NODE_VERSION = "22"
 
-# Single-page app: unknown paths load the app, which shows its own 404 page.
+# The admin is a single-page app: unknown /admin/ paths load the admin.
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Single-page app: unknown paths load the site, which shows its own 404 page.
 [[redirects]]
   from = "/*"
   to = "/index.html"

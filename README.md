@@ -6,7 +6,8 @@
 | `admin/`  | Admin dashboard to edit profile, links, skills, experience and projects | `/admin`   |
 | `server/` | Serves the site, the admin, and the content API                         | `/api`     |
 
-All site content lives in **`front/src/data/content.json`**. The admin edits it through the server.
+All site content lives in **`front/src/data/content.json`**. The admin edits it through the server, or,
+on Netlify and GitHub Pages, by committing to GitHub (see below).
 
 ## First-time setup
 
@@ -51,13 +52,29 @@ cd front  && npm run dev     # site on :8080
 Open http://localhost:8080 for the site and http://localhost:8080/admin for the admin, the same layout as production.
 The site reloads automatically when you save in the admin.
 
-## GitHub Pages and Netlify (static copies)
+## GitHub Pages and Netlify (online admin)
 
-Both hosts publish only the public site (`front/`), built with the bundled `content.json`. They can't run
-the server, so `/admin` only works on your own server. To update them, commit `front/src/data/content.json`
-(and `front/public/uploads`) and push to `main`. Each host rebuilds on every push.
+Both hosts publish the site and the admin as static files, rebuilt on every push to `main`:
 
-- **GitHub Pages:** `.github/workflows/deploy.yml` builds the site for the `/portfolio_site/` sub-path.
-  Live at https://mightyeagle-1052.github.io/portfolio_site/
-- **Netlify:** `netlify.toml` tells Netlify to install and build inside `front/` and publish `front/dist`.
-  It overrides the build settings in the Netlify dashboard, so you don't need to set those yourself.
+- **Netlify:** the site at `/`, the admin at `/admin/`. `netlify.toml` holds the build settings and
+  overrides the Netlify dashboard, so there is nothing to set there.
+- **GitHub Pages:** `.github/workflows/deploy.yml` builds for the `/portfolio_site/` sub-path.
+  Site: https://mightyeagle-1052.github.io/portfolio_site/ · admin: https://mightyeagle-1052.github.io/portfolio_site/admin/
+
+These hosts can't run the server, so the online admin signs in with a **GitHub token** instead of the
+password, and **Save** commits `front/src/data/content.json` (plus any new images, in `front/public/uploads/`)
+straight to the repository. Netlify and GitHub Pages then rebuild, and the change is live in about
+1–2 minutes. Each save is one commit and one build on each host.
+
+To get a token, click **How do I get a token?** on the admin's sign-in page. It opens GitHub's new-token
+page with the name, expiry and permission filled in; choose **Only select repositories** and this
+repository, check that **Contents** is **Read and write**, and generate it. The token stays in your browser
+(tick **Remember me on this device** to keep it after the tab closes) and is sent only to GitHub. If the
+token expires or is deleted, the admin asks for a new one.
+
+If you also edit with the admin on your own server (`npm start`), run `git pull` first so you start from
+the latest online saves, then commit and push your local edits.
+
+Build the static copy yourself with `npm run setup:static && npm run build:static` (output in `front/dist`,
+admin in `front/dist/admin`). `BASE_PATH=/sub-path/` builds for a sub-path. The admin saves to the GitHub
+repository and branch it was built from; set `ADMIN_GITHUB_REPO=owner/repo` and `ADMIN_GITHUB_BRANCH` to override.

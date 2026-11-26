@@ -6,6 +6,8 @@
     "setup": "npm --prefix server install && npm --prefix admin install && npm --prefix front install",
     "build": "npm --prefix front run build && npm --prefix admin run build",
     "start": "npm --prefix server start",
-    "serve": "npm run build && npm start"
+    "serve": "npm run build && npm start",
+    "setup:static": "npm --prefix front ci && npm --prefix admin ci",
+    "build:static": "npm --prefix front run build && npm --prefix admin run build:static"
   }
 }

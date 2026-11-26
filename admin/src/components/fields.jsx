@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { api, assetUrl } from '../api.js';
+import { api } from '../api.js';
 
 export function Field({ label, hint, children, wide }) {
   return (
@@ -130,10 +130,20 @@ export function Lines({ label, hint, value = [], onChange, rows = 5 }) {
 }
 
 export function Thumb({ src, className = '' }) {
-  const [broken, setBroken] = useState(false);
-  useEffect(() => setBroken(false), [src]);
-  if (!src || broken) return <div className={`thumb thumb--empty ${className}`}>No image</div>;
-  return <img className={`thumb ${className}`} src={assetUrl(src)} alt="" loading="lazy" onError={() => setBroken(true)} />;
+  // Try each preview URL in turn until one loads.
+  const urls = api.assetUrls(src);
+  const [failed, setFailed] = useState({ src, count: 0 });
+  const tried = failed.src === src ? failed.count : 0;
+  if (tried >= urls.length) return <div className={`thumb thumb--empty ${className}`}>No image</div>;
+  return (
+    <img
+      className={`thumb ${className}`}
+      src={urls[tried]}
+      alt=""
+      loading="lazy"
+      onError={() => setFailed({ src, count: tried + 1 })}
+    />
+  );
 }
 
 function useUploader(onDone, notify) {

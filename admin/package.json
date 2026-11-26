@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:static": "vite build --mode static --outDir ../front/dist/admin --emptyOutDir",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -16,8 +16,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build the public site (front/) as static files. The admin and server need Node
-  # and are not deployed here: GitHub Pages only hosts static files.
+  # Build the public site (front/) and the admin (admin/, served at /admin/) as static files.
+  # GitHub Pages can't run the server, so this admin saves by committing to the repository
+  # with the user's GitHub token, which runs this workflow again.
   build:
     runs-on: ubuntu-latest
 
@@ -30,22 +31,22 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: front/package-lock.json
+          cache-dependency-path: |
+            front/package-lock.json
+            admin/package-lock.json
 
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v6
 
       - name: Install dependencies
-        working-directory: front
-        run: npm ci
+        run: npm run setup:static
 
-      - name: Build website
-        working-directory: front
+      - name: Build website and admin
         env:
           # Pages serves the site under /<repo-name>/ (or / with a custom domain).
           BASE_PATH: ${{ steps.pages.outputs.base_path }}/
-        run: npm run build
+        run: npm run build:static
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v5

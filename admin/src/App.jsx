@@ -1,5 +1,17 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { api, AuthError, getToken, setToken } from './api.js';
+import {
+  api,
+  AuthError,
+  ConflictError,
+  GITHUB_TARGET,
+  MODE,
+  NOT_CONNECTED,
+  REPO_NAME,
+  SITE_URL,
+  TOKEN_HELP_URL,
+  getToken,
+  setToken,
+} from './api.js';
 import ProfileSection from './sections/ProfileSection.jsx';
 import ExpertiseSection from './sections/ExpertiseSection.jsx';
 import SkillsSection from './sections/SkillsSection.jsx';
@@ -15,17 +27,48 @@ const SECTIONS = [
   { id: 'projects', label: 'Projects', icon: '🗂', Component: ProjectsSection },
 ];
 
+// On static hosts (GitHub mode) there is no server to check a password, so the admin signs in with
+// a GitHub token and saves by committing to the repository.
+const GITHUB_MODE = MODE === 'github';
+
+function TokenHelp() {
+  return (
+    <details className="help">
+      <summary>How do I get a token?</summary>
+      <ol>
+        <li>
+          <a href={TOKEN_HELP_URL} target="_blank" rel="noreferrer">
+            Open GitHub&apos;s new token page
+          </a>{' '}
+          and sign in to GitHub if asked. The name, expiry and permission are already filled in.
+        </li>
+        <li>
+          Under <b>Repository access</b>, choose <b>Only select repositories</b> and pick <b>{REPO_NAME}</b>.
+        </li>
+        <li>
+          Check that <b>Contents</b> is set to <b>Read and write</b>, then click <b>Generate token</b>.
+        </li>
+        <li>
+          Copy the token (it starts with <code>github_pat_</code>) and paste it above.
+        </li>
+      </ol>
+      <p>The token stays in this browser and is sent only to GitHub.</p>
+    </details>
+  );
+}
+
 function Login({ onLogin, message }) {
-  const [password, setPassword] = useState('');
+  const [secret, setSecret] = useState('');
+  const [remember, setRemember] = useState(false);
   const [error, setError] = useState(message || '');
   const [busy, setBusy] = useState(false);
+  const notConnected = GITHUB_MODE && !GITHUB_TARGET;
   const submit = async (e) => {
     e.preventDefault();
     setBusy(true);
     setError('');
     try {
-      const { token } = await api.login(password);
-      setToken(token);
+      await api.login(secret, { remember });
       onLogin();
     } catch (err) {
       setError(err.message);
@@ -37,19 +80,36 @@ function Login({ onLogin, message }) {
     <div className="login">
       <form className="login__card" onSubmit={submit}>
         <div className="brand brand--lg">Portfolio Admin</div>
-        <p className="muted">Sign in to edit your portfolio content.</p>
+        {GITHUB_MODE ? (
+          <p className="muted">
+            Sign in with a GitHub token to edit your portfolio. Saving updates <b>{REPO_NAME || 'your repository'}</b> on
+            GitHub, and the site updates about 1–2 minutes later.
+          </p>
+        ) : (
+          <p className="muted">Sign in to edit your portfolio content.</p>
+        )}
+        {notConnected && <div className="alert">{NOT_CONNECTED}</div>}
         <input
           className="input"
           type="password"
-          placeholder="Admin password"
+          placeholder={GITHUB_MODE ? 'GitHub token (github_pat_…)' : 'Admin password'}
+          autoComplete={GITHUB_MODE ? 'off' : 'current-password'}
           autoFocus
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          disabled={notConnected}
+          value={secret}
+          onChange={(e) => setSecret(e.target.value)}
         />
+        {GITHUB_MODE && (
+          <label className="check">
+            <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
+            Remember me on this device
+          </label>
+        )}
         {error && <div className="alert">{error}</div>}
-        <button className="btn btn--primary" disabled={busy || !password}>
+        <button className="btn btn--primary" disabled={busy || !secret.trim() || notConnected}>
           {busy ? 'Signing in…' : 'Sign in'}
         </button>
+        {GITHUB_MODE && !notConnected && <TokenHelp />}
       </form>
     </div>
   );
@@ -99,7 +159,12 @@ export default function App() {
       setSaved(content);
       setDraft(structuredClone(content));
     } catch (err) {
-      setLoadError(err.message);
+      if (err instanceof AuthError) {
+        setAuthMessage(err.message);
+        setAuthed(false);
+      } else {
+        setLoadError(err.message);
+      }
     }
   }, []);
 
@@ -128,13 +193,23 @@ export default function App() {
     if (!draft || saving) return;
     setSaving(true);
     try {
-      const { content } = await api.saveContent(draft);
-      setSaved(content);
-      setDraft(structuredClone(content));
-      notify('Saved. Your site content is updated.');
+      let result;
+      try {
+        result = await api.saveContent(draft);
+      } catch (err) {
+        if (!(err instanceof ConflictError)) throw err;
+        if (!confirm(`${err.message}\n\nSave anyway?`)) {
+          notify('Not saved. Your edits are still here. To get the newer content instead, reload the page.', 'error');
+          return;
+        }
+        result = await api.saveContent(draft, { force: true });
+      }
+      setSaved(result.content);
+      setDraft(structuredClone(result.content));
+      notify(result.message || 'Saved. Your site content is updated.');
     } catch (err) {
       if (err instanceof AuthError) {
-        // Keep the unsaved draft; just ask for the password again.
+        // Keep the unsaved draft; just ask to sign in again.
         setAuthMessage(err.message);
         setAuthed(false);
       } else {
@@ -197,7 +272,8 @@ export default function App() {
           </button>
         ))}
         <div className="sidebar__foot">
-          <a className="nav-item" href="/" target="_blank" rel="noreferrer">
+          {GITHUB_MODE && <div className="sidebar__note">Saves to GitHub: {REPO_NAME}</div>}
+          <a className="nav-item" href={SITE_URL} target="_blank" rel="noreferrer">
             ↗ View site
           </a>
           <button type="button" className="nav-item" onClick={logout}>
